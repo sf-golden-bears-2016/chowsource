@@ -4,4 +4,6 @@ class Recipe < ApplicationRecord
   has_many   :menu_recipes
   has_many   :menus, through: :menu_recipes
   has_many   :loves
+
+  validates :name, :prep_time, :cook_time, :ingredients, :price, :description, :directions, :servings, :course, presence: true
 end
