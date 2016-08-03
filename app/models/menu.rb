@@ -1,5 +1,5 @@
 class Menu < ApplicationRecord
   belongs_to :user
-  has_many :menu_items
-  has_many :recipes, through: :menu_items
+  has_many :menu_recipes
+  has_many :recipes, through: :menu_recipes
 end
