@@ -6,10 +6,13 @@ class SessionsController < ApplicationController
     uid = auth_hash.uid
     email = auth_hash.info.email
 
-    user = User.create!(token: token, name: name, pic: pic, uid: uid, email: email)
+    user = User.find_by(uid: uid)
+    if !user
+      user = User.create(token: token, name: name, pic: pic, email: email, uid: uid)
+    end
     session[:id] = nil
     login(user)
-    redirect_to '/'
+    redirect_to '/recipes'
   end
 
   def delete

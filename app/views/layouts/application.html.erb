@@ -32,7 +32,7 @@
   <body>
 		<% if current_user %>
 		<a href="/users/<%= current_user.id %>">Profile</a>
-		<a href="/">Log out</a>
+		<a href="/sessions/logout">Log out</a>
 		<% end %>
 
     <%= yield %>
