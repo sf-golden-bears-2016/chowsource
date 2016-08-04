@@ -1,11 +1,37 @@
 <h1>All Recipes</h1>
 
-<ul id="recipes">
-  <% @recipes.each do |recipe| %>
+<!-- <ul id="recipes">
+  <%# @recipes.each do |recipe| %>
   <li>
-    <%= link_to recipe.title, recipe_path(recipe), class: 'recipe_title', id: "recipe_#{recipe.id}" %>
+    <%#= link_to recipe.title, recipe_path(recipe), class: 'recipe_title', id: "recipe_#{recipe.id}" %>
   </li>
-  <% end %>
-</ul>
+  <%# end %>
+</ul> -->
+
+<div class="container">
+ <div class="row">
+  <% @recipes.each do |recipe| %>
+  <div class="col-sm-3 col-lg-3 col-md-3">
+    <div class="thumbnail">
+      <div class="caption" style="height: 250px";>
+       <h4 class="pull-right">♥️</h4>
+       <h4 class="center">
+        <%= recipe.name%>
+      </h4>
+
+  <!--     <form action="/recipes/<%#= recipe.id %>" method="post">
+        <input id="hidden" type="hidden" name="_method" value="put">
+        <button type="submit" class="btn btn-success">Buy</button>
+      </form> -->
+
+    </div>
+    <br>
+  </div>
+</div>
+<% end %>
+</div>
+
+
+
 
 <%= link_to "Create a New Recipe", new_recipe_path, class: "new_recipe" %>
