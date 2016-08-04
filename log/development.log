@@ -16415,3 +16415,3263 @@ Completed 200 OK in 23ms (Views: 20.7ms | ActiveRecord: 0.4ms)
 =======
 >>>>>>> a0b78a1f259ae636c05b63a67ff8da7206c5022a
 >>>>>>> a0f8dc1ee62117bcb1bd1d4af4dbcc9ebea5d416
+Started GET "/" for ::1 at 2016-08-04 12:19:54 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  Rendered sessions/login.html.erb within layouts/application (46.2ms)
+Completed 200 OK in 503ms (Views: 495.1ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/sessions/logout" for ::1 at 2016-08-04 12:20:03 -0700
+Processing by SessionsController#delete as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 12:20:03 -0700
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.erb within layouts/application
+  Rendered sessions/login.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 31ms (Views: 28.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook" for ::1 at 2016-08-04 12:20:51 -0700
+Started GET "/auth/facebook/callback?code=AQAQc4YAxyOBddpVYgPrM9-jUxCt2vlCvy3AcH4-kSqn_jEXhUxO6Tu7YnW_TjHNumRsYZiyIaIC9NnSZHllT6WK92FFfRUGcqtaJ7KQzSjZYfOXZ2Sd9XbW_sXPWYXzz_ixdh5P00ufZcep6oHWe_xydN8JI4_Qz-r2TfMl_smZ81qQBd4U3dSWqzpk_rosp91ri4Kwn4mEp1blRL3i_SUghfZHsXK2Bhc0D4a_ZBlV_GIHK0fWhn9cX3XGwlYCKAWfj6-dqb46InDOcetSPBt2TlWT0Sl_DV5sJzli5TEH2OCMay0ICkhWG9iZVRsJd9M&state=bf7bdc11164fd126553bb743bb6835543f5ea9fae133c45b" for ::1 at 2016-08-04 12:21:14 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQAQc4YAxyOBddpVYgPrM9-jUxCt2vlCvy3AcH4-kSqn_jEXhUxO6Tu7YnW_TjHNumRsYZiyIaIC9NnSZHllT6WK92FFfRUGcqtaJ7KQzSjZYfOXZ2Sd9XbW_sXPWYXzz_ixdh5P00ufZcep6oHWe_xydN8JI4_Qz-r2TfMl_smZ81qQBd4U3dSWqzpk_rosp91ri4Kwn4mEp1blRL3i_SUghfZHsXK2Bhc0D4a_ZBlV_GIHK0fWhn9cX3XGwlYCKAWfj6-dqb46InDOcetSPBt2TlWT0Sl_DV5sJzli5TEH2OCMay0ICkhWG9iZVRsJd9M", "state"=>"bf7bdc11164fd126553bb743bb6835543f5ea9fae133c45b", "provider"=>"facebook"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "users" ("token", "name", "pic", "uid", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["token", "EAADr8tEA54QBAMnn3AJlZCFrClyRTSIbuACDvsarJokQXp2dTh1h2g2ZCRcu3V5lXMLcmAds8yGwBAjecDiio11j6GahfBNGNEKoaTCq3QsZBtSEKSz7I4A7ZCOQ9skMisP03i2EXSlRKuF0NZBotjGwSEw202F8ZD"], ["name", "Will Friebel"], ["pic", "http://graph.facebook.com/v2.6/796819854942/picture"], ["uid", "796819854942"], ["email", "will.friebel@gmail.com"], ["created_at", 2016-08-04 19:21:14 UTC], ["updated_at", 2016-08-04 19:21:14 UTC]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 12:21:14 -0700
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  Rendered sessions/login.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 48ms (Views: 45.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 12:22:05 -0700
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  Rendered sessions/login.html.erb within layouts/application (20.7ms)
+Completed 200 OK in 53ms (Views: 51.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 12:22:07 -0700
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  Rendered sessions/login.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 24ms (Views: 22.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 12:22:25 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  Rendered sessions/login.html.erb within layouts/application (45.1ms)
+Completed 200 OK in 356ms (Views: 347.1ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/auth/facebook" for ::1 at 2016-08-04 12:22:28 -0700
+Started GET "/auth/facebook/callback?code=AQBMDbhQTEt201ofhI0Jy58czBgIshui9TFwHjmVTb3WpZ_v_mjV-k7YM6MNnT6IR6EMx8mLGCvkoyIOvBJCFbQQjc_APHjVkoOlV8YIN-RUR3wsKpH1v5DPRegIC6x389mtyVGIzv2Elfkv0kUR0G-B45cVQUhKTOliO1AkmPVeiOiC_luxEcjyo6bmbF8HT2gztFQQ8o0hkKsp22yGFCTsYhSReeR-h8To-YhNh_fh2foKmgfB0MBOMMiFlUpNJ49l04RBodeqXKbPd7ogT4KPYNcsXMY9unVVZNOebs6ZN7JMupbjHppRbXGrbOpWlDI&state=186bda01eeab245edea2d9b76fed449a4879762e503417be" for ::1 at 2016-08-04 12:22:36 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQBMDbhQTEt201ofhI0Jy58czBgIshui9TFwHjmVTb3WpZ_v_mjV-k7YM6MNnT6IR6EMx8mLGCvkoyIOvBJCFbQQjc_APHjVkoOlV8YIN-RUR3wsKpH1v5DPRegIC6x389mtyVGIzv2Elfkv0kUR0G-B45cVQUhKTOliO1AkmPVeiOiC_luxEcjyo6bmbF8HT2gztFQQ8o0hkKsp22yGFCTsYhSReeR-h8To-YhNh_fh2foKmgfB0MBOMMiFlUpNJ49l04RBodeqXKbPd7ogT4KPYNcsXMY9unVVZNOebs6ZN7JMupbjHppRbXGrbOpWlDI", "state"=>"186bda01eeab245edea2d9b76fed449a4879762e503417be", "provider"=>"facebook"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("token", "name", "pic", "uid", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["token", "EAADr8tEA54QBAPO9gqRZBCgUiYJWPzEqNipeN83z6PQiMPP7yW6dKq3mjTHkqZBeeQJZA4KZA4NgJjOHlrIgujy8BIZA0y7yZC45YI3JPKxSn1RKSOV4HOhliE4B0W8HNrHC1lMA1PZBrG0YrCAt71AiaIt73ImZATAZD"], ["name", "Will Friebel"], ["pic", "http://graph.facebook.com/v2.6/796819854942/picture"], ["uid", "796819854942"], ["email", "will.friebel@gmail.com"], ["created_at", 2016-08-04 19:22:36 UTC], ["updated_at", 2016-08-04 19:22:36 UTC]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 12:22:36 -0700
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  Rendered sessions/login.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 39ms (Views: 37.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 12:23:17 -0700
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  Rendered sessions/login.html.erb within layouts/application (28.8ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+Completed 200 OK in 69ms (Views: 64.3ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 12:23:33 -0700
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  Rendered sessions/login.html.erb within layouts/application (17.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+Completed 200 OK in 44ms (Views: 41.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/auth/facebook" for ::1 at 2016-08-04 12:23:55 -0700
+Started GET "/auth/facebook/callback?code=AQDwMlDbG-QKCBzE6_vNGEypcEHPgHBILKwXKjdEyhaOXY9ygQC2D3pMFmYhAkiYYEmhuYyQIkJC0rG4HaNItqLoNRM8WrOdrqaBKgKqox-2176w7PnUSVDQC6EjwHneKmW_tGtbs2cm3Fego68oDg7lHunki3frjUEWolb22bEdgTtv1vhFl6UGd8l3Yb5oUEF0mFHcLxNdzZcENlvCrxLM2usytbRuQetAyBFcIbh6jAn7Q1H9tddBFkrqLHgZEs-ANCAXJMXslcj9dxBsGcWEbzaYg6XqJD-ZidhLVnC3mXcg3s4AOL3kJeR-2f-FTqU&state=ccbbb44dd854969911f65aafb20efe5da84f8798ebbe5580" for ::1 at 2016-08-04 12:23:55 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQDwMlDbG-QKCBzE6_vNGEypcEHPgHBILKwXKjdEyhaOXY9ygQC2D3pMFmYhAkiYYEmhuYyQIkJC0rG4HaNItqLoNRM8WrOdrqaBKgKqox-2176w7PnUSVDQC6EjwHneKmW_tGtbs2cm3Fego68oDg7lHunki3frjUEWolb22bEdgTtv1vhFl6UGd8l3Yb5oUEF0mFHcLxNdzZcENlvCrxLM2usytbRuQetAyBFcIbh6jAn7Q1H9tddBFkrqLHgZEs-ANCAXJMXslcj9dxBsGcWEbzaYg6XqJD-ZidhLVnC3mXcg3s4AOL3kJeR-2f-FTqU", "state"=>"ccbbb44dd854969911f65aafb20efe5da84f8798ebbe5580", "provider"=>"facebook"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("token", "name", "pic", "uid", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["token", "EAADr8tEA54QBAADDEYtxK4TZCJlKFITLkYijLH97o7MZBzPqLyIKx1SCIr0w04ldVAuNB9PcTiIsbbUOV3DaRugEYwGNquIJjNZAKh86XkTuWLeSyHALjpZBNqSd4nkpDssBIWvaRZBI4eeEcVQTReOi4rEA5laUZD"], ["name", "Will Friebel"], ["pic", "http://graph.facebook.com/v2.6/796819854942/picture"], ["uid", "796819854942"], ["email", "will.friebel@gmail.com"], ["created_at", 2016-08-04 19:23:55 UTC], ["updated_at", 2016-08-04 19:23:55 UTC]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 24ms (ActiveRecord: 6.7ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 12:23:55 -0700
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  Rendered sessions/login.html.erb within layouts/application (4.1ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+Completed 200 OK in 37ms (Views: 34.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 12:28:30 -0700
+  
+ActionController::RoutingError (undefined local variable or method `current_user' for ApplicationController:Class):
+  
+app/controllers/application_controller.rb:3:in `<class:ApplicationController>'
+app/controllers/application_controller.rb:1:in `<top (required)>'
+app/controllers/sessions_controller.rb:1:in `<top (required)>'
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered collection of /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb [20 times] (9.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (34.3ms)
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (173.3ms)
+Started GET "/" for ::1 at 2016-08-04 12:28:50 -0700
+  
+ActionController::RoutingError (undefined local variable or method `session' for ApplicationController:Class):
+  
+app/controllers/application_controller.rb:3:in `<class:ApplicationController>'
+app/controllers/application_controller.rb:1:in `<top (required)>'
+app/controllers/sessions_controller.rb:1:in `<top (required)>'
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.6ms)
+  Rendered collection of /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb [20 times] (6.0ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (130.9ms)
+Started GET "/" for ::1 at 2016-08-04 12:30:32 -0700
+  
+ActionController::RoutingError (undefined local variable or method `session' for ApplicationController:Class):
+  
+app/controllers/application_controller.rb:4:in `<class:ApplicationController>'
+app/controllers/application_controller.rb:1:in `<top (required)>'
+app/controllers/sessions_controller.rb:1:in `<top (required)>'
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered collection of /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb [20 times] (6.8ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (138.6ms)
+Started GET "/" for ::1 at 2016-08-04 14:31:56 -0700
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  Rendered sessions/login.html.erb within layouts/application (16.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+Completed 200 OK in 44ms (Views: 41.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/sessions/logout" for ::1 at 2016-08-04 14:32:02 -0700
+Processing by SessionsController#delete as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:32:02 -0700
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.erb within layouts/application
+  Rendered sessions/login.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 29ms (Views: 25.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook" for ::1 at 2016-08-04 14:32:04 -0700
+Started GET "/auth/facebook/callback?code=AQBA_GVOBokWYAc8KLDQE6JgzuxEo0QoFJri9r0jqPXXQRwGMVAue1nGLafILOEwNVhDQnBddksevY4HZ0iZEs7vB-gZsyK_nRIxQHr7NvtTjbUA5c2LIlMITdVHnhNbrfKBd8LapqLQ9r4MQ0Ub1wmsQnFsupKIvWPAxqTG6pO2aBCyH9jNuv2V0J3ga9SCffMR_bEJPO54PaSTr6Cb7BPLdwMadDllgL8Gb9gIviwv66sTbDL9bgMXA5ZAxWn7W4bt-zqeXZcGIAfPqaXwuPAj7k6lcn4xhU23IaONfosyul7BQu706mwStx-n3fYSe88&state=cf919b71ac35f9c9084c7d1202cbcbc6c3fe3c34e3f2247b" for ::1 at 2016-08-04 14:32:04 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQBA_GVOBokWYAc8KLDQE6JgzuxEo0QoFJri9r0jqPXXQRwGMVAue1nGLafILOEwNVhDQnBddksevY4HZ0iZEs7vB-gZsyK_nRIxQHr7NvtTjbUA5c2LIlMITdVHnhNbrfKBd8LapqLQ9r4MQ0Ub1wmsQnFsupKIvWPAxqTG6pO2aBCyH9jNuv2V0J3ga9SCffMR_bEJPO54PaSTr6Cb7BPLdwMadDllgL8Gb9gIviwv66sTbDL9bgMXA5ZAxWn7W4bt-zqeXZcGIAfPqaXwuPAj7k6lcn4xhU23IaONfosyul7BQu706mwStx-n3fYSe88", "state"=>"cf919b71ac35f9c9084c7d1202cbcbc6c3fe3c34e3f2247b", "provider"=>"facebook"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "users" ("token", "name", "pic", "uid", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["token", "EAADr8tEA54QBAMAZAB5lJ5pqQJpyBjRmnOCHZBCewkr59K7XjNApZC4oqMU2PZBpilM2QDVoWOWR3lKVYITidPtbTW0ZC8V1ENp6rZBzPAm6IfZAUJDVCM6osZB70spc8MLdi9b5crhIzxCVxEbMw4sazuaXAJ7b4uYZD"], ["name", "Will Friebel"], ["pic", "http://graph.facebook.com/v2.6/796819854942/picture"], ["uid", "796819854942"], ["email", "will.friebel@gmail.com"], ["created_at", 2016-08-04 21:32:05 UTC], ["updated_at", 2016-08-04 21:32:05 UTC]]
+  [1m[35m (58.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 64ms (ActiveRecord: 60.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:32:05 -0700
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  Rendered sessions/login.html.erb within layouts/application (1.9ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+Completed 200 OK in 32ms (Views: 28.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:42:17 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#login as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  Rendering sessions/login.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  Rendered sessions/login.html.erb within layouts/application (3.3ms)
+Completed 500 Internal Server Error in 485ms (ActiveRecord: 5.1ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `current_user' for #<#<Class:0x007fc791d43658>:0x007fc7930f36f8>
+Did you mean?  @current_user):
+    11:   <body>
+    12: 
+    13: 
+    14: 		<% if current_user %>
+    15: 		<a href="/sessions/<%= current_user.id %>">Profile</a>
+    16: 		<a href="/">Log out</a>
+    17: 		<% end %>
+  
+app/views/layouts/application.html.erb:14:in `_app_views_layouts_application_html_erb___173331816631360118_70247561532440'
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.2ms)
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (105.4ms)
+Started GET "/" for ::1 at 2016-08-04 14:42:50 -0700
+Processing by SessionsController#login as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  Rendering sessions/login.html.erb within layouts/application
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  Rendered sessions/login.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 55ms (Views: 36.4ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/sessions/logout" for ::1 at 2016-08-04 14:42:52 -0700
+Processing by SessionsController#delete as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:42:52 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:42:53 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:42:53 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:42:53 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:42:53 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:42:53 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:42:53 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:42:53 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:42:53 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:42:53 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:42:53 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:42:53 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:42:53 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:42:53 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:42:53 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:42:53 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:42:53 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:42:53 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:42:53 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:42:53 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:42:53 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:42:53 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:42:53 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:42:53 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:42:53 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:42:53 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:42:53 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:42:53 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:42:53 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:42:53 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:42:53 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:42:53 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:42:53 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:42:53 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:42:53 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:42:53 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:42:53 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:42:53 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:42:53 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:42:53 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:42:53 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:42:57 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:42:57 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:42:57 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:42:57 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:42:57 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:42:57 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:42:57 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:42:57 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:42:57 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:42:57 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:42:57 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:42:57 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:42:57 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:42:57 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:42:57 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:42:57 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:42:57 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:42:57 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:42:57 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:42:57 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:42:57 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:43:02 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:43:02 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:43:02 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:43:02 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:43:02 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:43:02 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:43:02 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:43:02 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:43:02 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:43:02 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:43:02 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:43:02 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:43:02 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:43:02 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:43:02 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:43:02 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:43:02 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:43:02 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:43:03 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:43:03 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:43:03 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:43:33 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:43:33 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:43:33 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:43:33 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:43:33 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:43:33 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:43:33 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:43:33 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:43:33 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:43:33 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:43:33 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:43:33 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:43:33 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:43:33 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:43:33 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:43:33 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:43:33 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:43:33 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:43:33 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:43:33 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:43:33 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:44:26 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 17ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:44:26 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:44:26 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:44:26 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:44:26 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:44:26 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:44:26 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:44:26 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:44:26 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:44:26 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:44:26 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:44:26 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:44:26 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:44:26 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:44:26 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:44:26 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:44:26 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:44:26 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:44:26 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:44:26 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:44:26 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:44:33 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:44:33 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:44:33 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:44:33 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:44:33 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:44:33 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:44:33 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:44:33 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:44:33 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:44:33 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:44:33 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:44:33 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:44:33 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:44:33 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:44:33 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:44:33 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:44:33 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:44:33 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:44:33 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:44:33 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:44:33 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:45:21 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.erb within layouts/application
+  Rendered sessions/login.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 311ms (Views: 309.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook" for ::1 at 2016-08-04 14:45:25 -0700
+Started GET "/auth/facebook/callback?code=AQDmDW-caXa3DREKSx3CTQgQOG2L_CF3BXdYHbUm_GWzykfeWs0HcBiXi2-cVk-agYmCL2Dw8bxaTD0xAW3OteZejhHClaVO3dISvbpe9w7HMfm0kuSvOyskHJ-lEXKCkxVrJYEdiWK9-czl2T018OMaAJh0qinPf99B8b1uufPZPdiM0yZ-c_mkEOs7RkCeWJV7p9rB1oMEIVdNMpUZJc7tbZCpIEyvu52brhFKaIeTnc6_39pbQeDgMkCtR_3SYX8AXOvEl8IvRu5yB8Go8QvNY9UqiX45GFt_upWyiN-S2g6AmJdhY0ebgSMuG8asrrs&state=d20db5e3d4f1b294fcd51721b8fa268a4978dafeea17aeb3" for ::1 at 2016-08-04 14:45:25 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQDmDW-caXa3DREKSx3CTQgQOG2L_CF3BXdYHbUm_GWzykfeWs0HcBiXi2-cVk-agYmCL2Dw8bxaTD0xAW3OteZejhHClaVO3dISvbpe9w7HMfm0kuSvOyskHJ-lEXKCkxVrJYEdiWK9-czl2T018OMaAJh0qinPf99B8b1uufPZPdiM0yZ-c_mkEOs7RkCeWJV7p9rB1oMEIVdNMpUZJc7tbZCpIEyvu52brhFKaIeTnc6_39pbQeDgMkCtR_3SYX8AXOvEl8IvRu5yB8Go8QvNY9UqiX45GFt_upWyiN-S2g6AmJdhY0ebgSMuG8asrrs", "state"=>"d20db5e3d4f1b294fcd51721b8fa268a4978dafeea17aeb3", "provider"=>"facebook"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("token", "name", "pic", "uid", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["token", "EAADr8tEA54QBACePGSbtEFZCQbmJLCeSIyolYavgypFmZAqXFVCRJqoKd1E0H2mlh4ZAOBiO1EiaUl3YbhoYcZAA9cInBMOjACj9s8e2btXyJxyGt3RnGJ1OJWbFHgFGNMW0oyTVZB6ZBoyZB4JaKdgzBkfli2wOhoZD"], ["name", "Will Friebel"], ["pic", "http://graph.facebook.com/v2.6/796819854942/picture"], ["uid", "796819854942"], ["email", "will.friebel@gmail.com"], ["created_at", 2016-08-04 21:45:26 UTC], ["updated_at", 2016-08-04 21:45:26 UTC]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 31ms (ActiveRecord: 5.5ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:45:26 -0700
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  Rendered sessions/login.html.erb within layouts/application (7.2ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+Completed 200 OK in 35ms (Views: 32.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/sessions/logout" for ::1 at 2016-08-04 14:45:28 -0700
+Processing by SessionsController#delete as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:45:28 -0700
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.erb within layouts/application
+  Rendered sessions/login.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 41ms (Views: 39.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:45:38 -0700
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.erb within layouts/application
+  Rendered sessions/login.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 56ms (Views: 52.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook" for ::1 at 2016-08-04 14:45:40 -0700
+Started GET "/auth/facebook/callback?code=AQC5C7DNk1Ln_xsi-oMmV5rqccF0Ji50CUCcq8VfgxwM5ytVPOev0zpZ4Evpbg-0YljF4BErKWI53LTD5bZQJlS-tr3QqJeUW2t-Ay77qxCDlTXYd1JisWXKyAFfePsOyODzngkeD8mbDFzhZe1_B6qIopSiL6cF7BVeKOCSlT1N2qqBeSOZYnEj73zJnavq-Cy4Cs72IJMpwsYFFyVdBWuonDpIjdAYpDFELyd5nKL6o3K4zez2R98ipm095pdkzoM86YvYNLDd52XGbVCsgY8ZFoNXh220szoPTus4gHuwYMvH_D1T3E1pZF8ZU-2pc3Q&state=b27f9cf6d15d6fd7145bae6aaf53d8579d436c983794d06b" for ::1 at 2016-08-04 14:45:40 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQC5C7DNk1Ln_xsi-oMmV5rqccF0Ji50CUCcq8VfgxwM5ytVPOev0zpZ4Evpbg-0YljF4BErKWI53LTD5bZQJlS-tr3QqJeUW2t-Ay77qxCDlTXYd1JisWXKyAFfePsOyODzngkeD8mbDFzhZe1_B6qIopSiL6cF7BVeKOCSlT1N2qqBeSOZYnEj73zJnavq-Cy4Cs72IJMpwsYFFyVdBWuonDpIjdAYpDFELyd5nKL6o3K4zez2R98ipm095pdkzoM86YvYNLDd52XGbVCsgY8ZFoNXh220szoPTus4gHuwYMvH_D1T3E1pZF8ZU-2pc3Q", "state"=>"b27f9cf6d15d6fd7145bae6aaf53d8579d436c983794d06b", "provider"=>"facebook"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("token", "name", "pic", "uid", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["token", "EAADr8tEA54QBALFOlBCvz6i4fcCNreLkmRkZC3LUFdjHkZCVGT4X0tCAriClMxGTxS9f0WEy2HoRu54kBpcuN5ZC5sHDWvj1sXDeOyFitpMH9Eg8v0rw8PYNgzdrSQLAsaMMIACI25y9pesSHaL7xNZBz118txEZD"], ["name", "Will Friebel"], ["pic", "http://graph.facebook.com/v2.6/796819854942/picture"], ["uid", "796819854942"], ["email", "will.friebel@gmail.com"], ["created_at", 2016-08-04 21:45:41 UTC], ["updated_at", 2016-08-04 21:45:41 UTC]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 22ms (ActiveRecord: 3.9ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:45:41 -0700
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  Rendered sessions/login.html.erb within layouts/application (4.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+Completed 200 OK in 29ms (Views: 26.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/sessions/logout" for ::1 at 2016-08-04 14:45:58 -0700
+Processing by SessionsController#delete as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:45:58 -0700
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.erb within layouts/application
+  Rendered sessions/login.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 27ms (Views: 24.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/logout" for ::1 at 2016-08-04 14:46:08 -0700
+Processing by SessionsController#delete as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:46:08 -0700
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.erb within layouts/application
+  Rendered sessions/login.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 30ms (Views: 27.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/logout" for ::1 at 2016-08-04 14:46:10 -0700
+Processing by SessionsController#delete as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:46:10 -0700
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.erb within layouts/application
+  Rendered sessions/login.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 29ms (Views: 27.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/recipes" for ::1 at 2016-08-04 14:46:18 -0700
+Processing by RecipesController#index as HTML
+  Rendering recipes/index.html.erb within layouts/application
+  [1m[36mRecipe Load (24.0ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  Rendered recipes/index.html.erb within layouts/application (31.4ms)
+Completed 200 OK in 99ms (Views: 33.1ms | ActiveRecord: 27.5ms)
+
+
+Started GET "/recipes" for ::1 at 2016-08-04 14:47:48 -0700
+Processing by RecipesController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:47:48 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:47:48 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:47:48 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:47:48 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:47:48 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:47:48 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:47:48 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:47:48 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:47:48 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:47:48 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:47:48 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:47:48 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:47:48 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:47:48 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:47:48 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:47:48 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:47:48 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:47:48 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:47:48 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:47:48 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:47:48 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:47:48 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:47:48 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:47:48 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:47:48 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:47:48 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:47:48 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:47:48 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:47:48 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:47:48 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:47:48 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:47:48 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:47:48 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:47:48 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:47:48 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:47:48 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:47:49 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:47:49 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:47:49 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:47:49 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:47:49 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:47:54 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:47:54 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:47:54 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:47:54 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:47:54 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:47:54 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:47:54 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:47:54 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:47:54 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:47:54 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:47:54 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:47:54 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:47:54 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:47:54 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:47:54 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:47:54 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:47:54 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:47:54 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:47:54 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:47:54 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:47:54 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:48:15 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 17ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:48:16 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:48:16 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:48:16 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:48:16 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:48:16 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:48:16 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:48:16 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:48:16 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:48:16 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:48:16 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:48:16 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:48:16 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:48:16 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:48:16 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:48:16 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:48:16 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:48:16 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:48:16 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:48:16 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:48:16 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:48:42 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 17ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:48:43 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:48:43 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:48:43 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:48:43 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:48:43 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:48:43 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:48:43 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:48:43 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:48:43 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:48:43 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:48:43 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:48:43 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:48:43 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:48:43 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:48:43 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:48:43 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:48:43 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:48:43 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:48:43 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:48:43 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:49:10 -0700
+  
+SyntaxError (/Users/apprentice/Desktop/chowsource/app/controllers/application_controller.rb:11: Invalid break):
+  
+app/controllers/application_controller.rb:11: Invalid break
+app/controllers/application_controller.rb
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (1.4ms)
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (108.7ms)
+Started GET "/" for ::1 at 2016-08-04 14:49:32 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:49:32 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:49:32 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:49:32 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:49:32 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:49:32 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:49:32 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:49:32 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:49:32 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:49:32 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:49:32 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:49:32 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:49:32 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:49:32 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:49:32 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:49:32 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:49:32 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:49:32 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:49:32 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:49:32 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:49:32 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:49:32 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:49:32 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:49:33 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:49:33 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:49:33 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:49:33 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:49:33 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:49:33 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:49:33 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:49:33 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:49:33 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:49:33 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:49:33 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:49:33 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:49:33 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:49:33 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:49:33 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:49:33 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:49:33 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:49:33 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:49:33 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:49:38 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:49:38 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:49:38 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:49:38 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:49:38 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:49:38 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:49:38 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:49:38 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:49:38 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:49:38 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:49:38 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:49:38 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:49:38 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:49:38 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:49:38 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:49:38 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:49:38 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:49:38 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:49:38 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:49:38 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:49:38 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:50:08 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:50:08 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:50:08 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:50:08 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:50:08 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:50:08 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:50:08 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:50:08 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:50:08 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:50:08 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:50:08 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:50:09 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:50:09 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:50:09 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:50:09 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:50:09 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:50:09 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:50:09 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:50:09 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:50:09 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:50:09 -0700
+Processing by SessionsController#login as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:51:09 -0700
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.erb within layouts/application
+  Rendered sessions/login.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 275ms (Views: 273.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/logout" for ::1 at 2016-08-04 14:51:15 -0700
+Processing by SessionsController#delete as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:51:16 -0700
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.erb within layouts/application
+  Rendered sessions/login.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 51ms (Views: 49.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/recipes" for ::1 at 2016-08-04 14:51:22 -0700
+Processing by RecipesController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:51:22 -0700
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.erb within layouts/application
+  Rendered sessions/login.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 45ms (Views: 42.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook" for ::1 at 2016-08-04 14:51:26 -0700
+Started GET "/auth/facebook/callback?code=AQAikipEEfT6k-A1X6RgXk5UYNssPGnG3FBqAojXTYa1HIsm2F5q3ADR85rIYrNlM2pAZW2grERUiAbFoiGRDdT1EYo1oF8U8VYURalNzqSQMBr5xEcwv4_tapbp7NnOiHzwiVLO5mpFkAsEfNINSBPiNiWUfMmfjV1mHOduQV32yh3NtkNjuthUD0G526fdDOvomygeXdqrSe0zpLNWLupMwUS1Pmyig3qiQE0PTyj9ANjnWZ0GGUmmgD81nfrewK9Dcr97-QLS5x3XuAc0PFCzF3CUzw6owcQHw3XO-ZCmVuW5VB1f3v6vQoJO7D40alA&state=eeb5ca3322173ca4085e1236117fefdd32114a035a2ea106" for ::1 at 2016-08-04 14:51:26 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQAikipEEfT6k-A1X6RgXk5UYNssPGnG3FBqAojXTYa1HIsm2F5q3ADR85rIYrNlM2pAZW2grERUiAbFoiGRDdT1EYo1oF8U8VYURalNzqSQMBr5xEcwv4_tapbp7NnOiHzwiVLO5mpFkAsEfNINSBPiNiWUfMmfjV1mHOduQV32yh3NtkNjuthUD0G526fdDOvomygeXdqrSe0zpLNWLupMwUS1Pmyig3qiQE0PTyj9ANjnWZ0GGUmmgD81nfrewK9Dcr97-QLS5x3XuAc0PFCzF3CUzw6owcQHw3XO-ZCmVuW5VB1f3v6vQoJO7D40alA", "state"=>"eeb5ca3322173ca4085e1236117fefdd32114a035a2ea106", "provider"=>"facebook"}
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:51:27 -0700
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.erb within layouts/application
+  Rendered sessions/login.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 41ms (Views: 38.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook" for ::1 at 2016-08-04 14:51:48 -0700
+Started GET "/auth/facebook/callback?code=AQCgUX6eWLi6qk50lJyEv9jTYO-VcdeZ8v4FW5jbwN79Cb4hqrIViTCrEXboHfJlrmvs_5YkU-2PzynFtEB1DiSf3Kb9gcsER5F7bhyjZ7jaee7KDKaPLN-jbdlsOFfPhAg7fOP8HgamB9hSqNSfk-V5UhcrWpd4eqxwRm2yIykqWJKn8Yr90COOJVy2UIC_NwHtYL1KDQTOB1rXArdCA42Y5E3kPsMNKuZ01uQ1faujkPRrtjzcoRy5TZXaQt0J03-hT2f9A-3OrBaSBFeLkCCLq4HGXmtrl8quCx6JWdLuXatCY0xrYctzPDUxgd4QT4c&state=530c94de1942f9d28c941955656019acace708d60ea92af3" for ::1 at 2016-08-04 14:51:48 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQCgUX6eWLi6qk50lJyEv9jTYO-VcdeZ8v4FW5jbwN79Cb4hqrIViTCrEXboHfJlrmvs_5YkU-2PzynFtEB1DiSf3Kb9gcsER5F7bhyjZ7jaee7KDKaPLN-jbdlsOFfPhAg7fOP8HgamB9hSqNSfk-V5UhcrWpd4eqxwRm2yIykqWJKn8Yr90COOJVy2UIC_NwHtYL1KDQTOB1rXArdCA42Y5E3kPsMNKuZ01uQ1faujkPRrtjzcoRy5TZXaQt0J03-hT2f9A-3OrBaSBFeLkCCLq4HGXmtrl8quCx6JWdLuXatCY0xrYctzPDUxgd4QT4c", "state"=>"530c94de1942f9d28c941955656019acace708d60ea92af3", "provider"=>"facebook"}
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:51:49 -0700
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.erb within layouts/application
+  Rendered sessions/login.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 32ms (Views: 30.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/recipes" for ::1 at 2016-08-04 14:51:57 -0700
+Processing by RecipesController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:51:57 -0700
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.erb within layouts/application
+  Rendered sessions/login.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 31ms (Views: 27.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/logout" for ::1 at 2016-08-04 14:52:22 -0700
+Processing by SessionsController#delete as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:52:22 -0700
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.erb within layouts/application
+  Rendered sessions/login.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 28ms (Views: 26.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/logout" for ::1 at 2016-08-04 14:52:28 -0700
+Processing by SessionsController#delete as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:52:28 -0700
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.erb within layouts/application
+  Rendered sessions/login.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 29ms (Views: 25.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook" for ::1 at 2016-08-04 14:52:32 -0700
+Started GET "/auth/facebook/callback?code=AQClpLBS9t-Oj6Eq890CryW8rfNxeBUVX0_bBo1X_Sh9k8iwBn4k-7JmdqyiSzUsJ2fKpToOMXTtbN4vjc87mELMHzOsGdUAoLG_fMvl7WrNt5dOX-QJu8y6PQ3jmMA_NQtYYfKyF4SwceSd0Mmbf723H_wQ4g-CSly4y_UlVFGTcvUI0Wv_IpYUvxsUn65srBMw28xoyO3bk3JBM6bVDG1i6vQv-0G9jaSGm7KpwCeFxDz7Ax55s1VDc6MkeaWm0tHnnD2lMKZFv2YUiZRLkzOkE1_27eH5tHHi_WTtqfzhbXnrR2pgfRX217ylus__pUk&state=670185161cd2c3df897e8414b7b85724083f44cbd6276ef7" for ::1 at 2016-08-04 14:52:32 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQClpLBS9t-Oj6Eq890CryW8rfNxeBUVX0_bBo1X_Sh9k8iwBn4k-7JmdqyiSzUsJ2fKpToOMXTtbN4vjc87mELMHzOsGdUAoLG_fMvl7WrNt5dOX-QJu8y6PQ3jmMA_NQtYYfKyF4SwceSd0Mmbf723H_wQ4g-CSly4y_UlVFGTcvUI0Wv_IpYUvxsUn65srBMw28xoyO3bk3JBM6bVDG1i6vQv-0G9jaSGm7KpwCeFxDz7Ax55s1VDc6MkeaWm0tHnnD2lMKZFv2YUiZRLkzOkE1_27eH5tHHi_WTtqfzhbXnrR2pgfRX217ylus__pUk", "state"=>"670185161cd2c3df897e8414b7b85724083f44cbd6276ef7", "provider"=>"facebook"}
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:52:32 -0700
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.erb within layouts/application
+  Rendered sessions/login.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 26ms (Views: 24.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/logout" for ::1 at 2016-08-04 14:53:18 -0700
+Processing by SessionsController#delete as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:53:18 -0700
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.erb within layouts/application
+  Rendered sessions/login.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 27ms (Views: 25.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/logout" for ::1 at 2016-08-04 14:53:19 -0700
+Processing by SessionsController#delete as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:53:19 -0700
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.erb within layouts/application
+  Rendered sessions/login.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 31ms (Views: 29.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook" for ::1 at 2016-08-04 14:53:22 -0700
+Started GET "/auth/facebook/callback?code=AQAhawPeXFo5m-gAFa1DKjvvlXdQTLwdUURFCJLFH5SPCEFWW25SnQI11deILRArbOSf9VBG1XlYmuI10i3-XqwDdLy5eDvU1fc_hiqoPYmWKOA-ARtah-hMpJt4qmZVpdokczS8ltvC3YC_iVhUXLduuXop8eFS4jEIlF3p0e42cUPJtV9fegZ2h4-XbBP_GneAZzY7RxqvxDD0YqtQYeJsEudmvME7yZWKHdQ0nOvvlSv5pU4bGQ33NKCl1oJnmI8D48xxwdVnDRb3trc_w0g7ywqz5M4NVFjoo2vUPJkfIxUiTIqfO9HIV3jb0-znQt8&state=60f37e7fe890e12d64d82101e851a74eadb84884d4df5a2c" for ::1 at 2016-08-04 14:53:23 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQAhawPeXFo5m-gAFa1DKjvvlXdQTLwdUURFCJLFH5SPCEFWW25SnQI11deILRArbOSf9VBG1XlYmuI10i3-XqwDdLy5eDvU1fc_hiqoPYmWKOA-ARtah-hMpJt4qmZVpdokczS8ltvC3YC_iVhUXLduuXop8eFS4jEIlF3p0e42cUPJtV9fegZ2h4-XbBP_GneAZzY7RxqvxDD0YqtQYeJsEudmvME7yZWKHdQ0nOvvlSv5pU4bGQ33NKCl1oJnmI8D48xxwdVnDRb3trc_w0g7ywqz5M4NVFjoo2vUPJkfIxUiTIqfO9HIV3jb0-znQt8", "state"=>"60f37e7fe890e12d64d82101e851a74eadb84884d4df5a2c", "provider"=>"facebook"}
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:53:23 -0700
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.erb within layouts/application
+  Rendered sessions/login.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 30ms (Views: 28.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/logout" for ::1 at 2016-08-04 14:54:02 -0700
+Processing by SessionsController#delete as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:54:02 -0700
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.erb within layouts/application
+  Rendered sessions/login.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 28ms (Views: 25.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook" for ::1 at 2016-08-04 14:54:06 -0700
+Started GET "/auth/facebook/callback?code=AQDuBhqKm8RvIDcSun7bi3oZ4LF6eHSD8FG7jPgHAZCvLo3S2xWSc_fn12jU4Jae5HOgwht7020qcE47iJXFK_d98Yb6JO-01jGCa_atch18FbHPFjLbO8CQa5w-M-wl8nOIgL6wCkTOCFO09hThLBXAKolMwjzbSHYB8Lpo0AjTtk88ag78tBbhMAxaqPBnmmqbi_8lox1KpzhcynWcmO8ESDW86Q0r1EB4v70MiEhW_tCzhw6WIFXVX2V5pB1YRFaQWFBflq0Xw2TCkO7yHIam4XvY82raRxm82VMHEUS1JtARMoqJq938c3zR10Oukr4&state=cfec6824d4036d298c60cba08f1e17d3962e92626647615e" for ::1 at 2016-08-04 14:54:06 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQDuBhqKm8RvIDcSun7bi3oZ4LF6eHSD8FG7jPgHAZCvLo3S2xWSc_fn12jU4Jae5HOgwht7020qcE47iJXFK_d98Yb6JO-01jGCa_atch18FbHPFjLbO8CQa5w-M-wl8nOIgL6wCkTOCFO09hThLBXAKolMwjzbSHYB8Lpo0AjTtk88ag78tBbhMAxaqPBnmmqbi_8lox1KpzhcynWcmO8ESDW86Q0r1EB4v70MiEhW_tCzhw6WIFXVX2V5pB1YRFaQWFBflq0Xw2TCkO7yHIam4XvY82raRxm82VMHEUS1JtARMoqJq938c3zR10Oukr4", "state"=>"cfec6824d4036d298c60cba08f1e17d3962e92626647615e", "provider"=>"facebook"}
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:54:07 -0700
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.erb within layouts/application
+  Rendered sessions/login.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 38ms (Views: 36.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/logout" for ::1 at 2016-08-04 14:54:48 -0700
+Processing by SessionsController#delete as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:54:48 -0700
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.erb within layouts/application
+  Rendered sessions/login.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 33ms (Views: 31.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook" for ::1 at 2016-08-04 14:54:49 -0700
+Started GET "/auth/facebook/callback?code=AQCAIQhznNxbfBNIIFjPbG0Xmf3cOsePldHepQ1QYXtiAH2lqc7e1SXuRJCXPdmAzZSwnelABV81p_iGmQtO5nhYBWBry3AWQWr3MlCLio5m035bYgAES3wdyL-Vut7c-bMsInnAeRTPUIUBeoiXgYwuYEZci6Yqvf-Szm577X_yqzzRBDHUPWy10Yg4wzpxfVCBmu22hqHvNsZ7SxDBQxLWNnoFGUeZs8Nsx4pIyBZ9Q1sLwq5DQ_7qEalJdKfDmFwFuhy59d1n3OtqTTZforVeg86Wymn52UJ0Bl1eCTtTnA8T4L_QVIPH1UMI3dzrH54&state=6a14668545ff4e1e0755af3e4b70f075ee1c6937fcf6e78a" for ::1 at 2016-08-04 14:54:49 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQCAIQhznNxbfBNIIFjPbG0Xmf3cOsePldHepQ1QYXtiAH2lqc7e1SXuRJCXPdmAzZSwnelABV81p_iGmQtO5nhYBWBry3AWQWr3MlCLio5m035bYgAES3wdyL-Vut7c-bMsInnAeRTPUIUBeoiXgYwuYEZci6Yqvf-Szm577X_yqzzRBDHUPWy10Yg4wzpxfVCBmu22hqHvNsZ7SxDBQxLWNnoFGUeZs8Nsx4pIyBZ9Q1sLwq5DQ_7qEalJdKfDmFwFuhy59d1n3OtqTTZforVeg86Wymn52UJ0Bl1eCTtTnA8T4L_QVIPH1UMI3dzrH54", "state"=>"6a14668545ff4e1e0755af3e4b70f075ee1c6937fcf6e78a", "provider"=>"facebook"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "users" ("token", "name", "pic", "uid", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["token", "EAADr8tEA54QBAKdhRrH7YtZA0YKNDbzRoZAqVv1CMQFDzjCZAnArUQdovcGgFKMHfdUm8nNyu3trFGMyoT7TIzBM3bBqz55utENHDrmLpQb7wHWZBdFWrZBCqS758WFC8UAFZBd6qSNqJLXAANXHHJ1Eh0kd3KYygZD"], ["name", "Will Friebel"], ["pic", "http://graph.facebook.com/v2.6/796819854942/picture"], ["uid", "796819854942"], ["email", "will.friebel@gmail.com"], ["created_at", 2016-08-04 21:54:49 UTC], ["updated_at", 2016-08-04 21:54:49 UTC]]
+  [1m[35m (124.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 158ms (ActiveRecord: 131.6ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:54:50 -0700
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  Rendered sessions/login.html.erb within layouts/application (5.6ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+Completed 200 OK in 35ms (Views: 32.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:55:32 -0700
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  Rendered sessions/login.html.erb within layouts/application (22.6ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+Completed 200 OK in 50ms (Views: 43.5ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:55:34 -0700
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  Rendered sessions/login.html.erb within layouts/application (2.3ms)
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+Completed 200 OK in 28ms (Views: 25.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:55:34 -0700
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  Rendered sessions/login.html.erb within layouts/application (2.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+Completed 200 OK in 28ms (Views: 25.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:55:35 -0700
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  Rendered sessions/login.html.erb within layouts/application (2.2ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+Completed 200 OK in 29ms (Views: 26.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:55:35 -0700
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  Rendered sessions/login.html.erb within layouts/application (1.7ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+Completed 200 OK in 31ms (Views: 29.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:55:36 -0700
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  Rendered sessions/login.html.erb within layouts/application (2.2ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+Completed 200 OK in 33ms (Views: 30.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:56:01 -0700
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  Rendered sessions/login.html.erb within layouts/application (15.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+Completed 200 OK in 44ms (Views: 41.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/sessions/logout" for ::1 at 2016-08-04 14:56:07 -0700
+Processing by SessionsController#delete as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:56:07 -0700
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.erb within layouts/application
+  Rendered sessions/login.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 34ms (Views: 31.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/recipes" for ::1 at 2016-08-04 14:56:15 -0700
+Processing by RecipesController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:56:15 -0700
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.erb within layouts/application
+  Rendered sessions/login.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 28ms (Views: 25.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook" for ::1 at 2016-08-04 14:56:20 -0700
+Started GET "/auth/facebook/callback?code=AQAOSE_LTSgF-HQOzFSjLmlAU-kB0vI9PiGqyiYBo8TIzAG5DUpiG5T_TbYQlYTjGNWa_hmy5zCjhgeAWp1TCmI626KRdVkiqN3OvEyUcebbKUZu6doAUMHnJU5AnWY906KR36mk-wGgwf0IU_UGXf0zWze_O5FR7RQUR1wCfdwVrRrlmDL6mdSFTHxHs7AY2seb_C9FBVFZwJ2pJkKIcTC72aaZi7EzGYyUvAi3QFvUi-ZO3AzQNLz2u_EmPr3tG84JW1MQdx4La_HQxTcCByz7ff_5UwRXEU3wPa62lhCco7wHZJhv_K_cx7n1AKHR_dE&state=1b8599b705f9ddff495ecae2f37495e8e9f20e7f1552d23a" for ::1 at 2016-08-04 14:56:20 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQAOSE_LTSgF-HQOzFSjLmlAU-kB0vI9PiGqyiYBo8TIzAG5DUpiG5T_TbYQlYTjGNWa_hmy5zCjhgeAWp1TCmI626KRdVkiqN3OvEyUcebbKUZu6doAUMHnJU5AnWY906KR36mk-wGgwf0IU_UGXf0zWze_O5FR7RQUR1wCfdwVrRrlmDL6mdSFTHxHs7AY2seb_C9FBVFZwJ2pJkKIcTC72aaZi7EzGYyUvAi3QFvUi-ZO3AzQNLz2u_EmPr3tG84JW1MQdx4La_HQxTcCByz7ff_5UwRXEU3wPa62lhCco7wHZJhv_K_cx7n1AKHR_dE", "state"=>"1b8599b705f9ddff495ecae2f37495e8e9f20e7f1552d23a", "provider"=>"facebook"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "users" ("token", "name", "pic", "uid", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["token", "EAADr8tEA54QBAELgLTPZCWmlPZCw62QNdKOc0ZCaZAiwOmYKernshpJHZBQfB5DOZBULb1ANlmNxVQtTmYBDbOreMPSGBiKAOwCO4YsIDQ4ZCGBsNYNWhlbSCXstlHBAaDpaZBVm80hbyJ5iZA3ZBZBZBpuSRXAmQ5F8DrkZD"], ["name", "Will Friebel"], ["pic", "http://graph.facebook.com/v2.6/796819854942/picture"], ["uid", "796819854942"], ["email", "will.friebel@gmail.com"], ["created_at", 2016-08-04 21:56:20 UTC], ["updated_at", 2016-08-04 21:56:20 UTC]]
+  [1m[35m (4.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 10ms (ActiveRecord: 5.7ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:56:20 -0700
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  Rendered sessions/login.html.erb within layouts/application (2.2ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+Completed 200 OK in 31ms (Views: 28.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/recipes" for ::1 at 2016-08-04 14:56:24 -0700
+Processing by RecipesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  Rendering recipes/index.html.erb within layouts/application
+  [1m[36mRecipe Load (0.9ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  Rendered recipes/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 45ms (Views: 31.5ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 14:56:28 -0700
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  Rendered sessions/login.html.erb within layouts/application (1.9ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+Completed 200 OK in 45ms (Views: 41.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sessions/23" for ::1 at 2016-08-04 15:07:31 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/sessions/23"):
+  
+actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.1.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0) lib/rails/engine.rb:522:in `call'
+puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered collection of /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb [20 times] (6.6ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (7.7ms)
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (128.1ms)
+Started GET "/" for ::1 at 2016-08-04 15:10:31 -0700
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  Rendered sessions/login.html.erb within layouts/application (29.1ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+Completed 200 OK in 65ms (Views: 57.2ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/users/23" for ::1 at 2016-08-04 15:10:33 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/users/23"):
+  
+actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.1.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0) lib/rails/engine.rb:522:in `call'
+puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered collection of /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb [20 times] (12.1ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.2ms)
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (180.7ms)
+Started GET "/" for ::1 at 2016-08-04 15:11:05 -0700
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  Rendered sessions/login.html.erb within layouts/application (2.9ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+Completed 200 OK in 31ms (Views: 28.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/23" for ::1 at 2016-08-04 15:11:06 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/users/23"):
+  
+actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.1.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0) lib/rails/engine.rb:522:in `call'
+puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered collection of /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb [20 times] (8.8ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (130.9ms)
+Started GET "/users/23" for ::1 at 2016-08-04 15:14:13 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 5.5ms)
+
+
+  
+ActiveRecord::StatementInvalid (PG::UndefinedTable: ERROR:  relation "loves" does not exist
+LINE 8:                WHERE a.attrelid = '"loves"'::regclass
+                                          ^
+:               SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod,
+             (SELECT c.collname FROM pg_collation c, pg_type t
+               WHERE c.oid = a.attcollation AND t.oid = a.atttypid AND a.attcollation <> t.typcollation),
+                     col_description(a.attrelid, a.attnum) AS comment
+                FROM pg_attribute a LEFT JOIN pg_attrdef d
+                  ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+               WHERE a.attrelid = '"loves"'::regclass
+                 AND a.attnum > 0 AND NOT a.attisdropped
+               ORDER BY a.attnum
+):
+  
+app/controllers/users_controller.rb:5:in `show'
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.7ms)
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (99.8ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]

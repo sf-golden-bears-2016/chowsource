@@ -31,4 +31,6 @@ class SessionsController < ApplicationController
   def logout
     session[:id] = nil
   end
+
+
 end
