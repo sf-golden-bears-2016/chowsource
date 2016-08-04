@@ -6,4 +6,6 @@ class User < ApplicationRecord
   has_many :loves
 
   validates :name, :email, presence: true
+
+
 end
