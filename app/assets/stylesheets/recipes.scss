@@ -1,3 +1,18 @@
 // Place all the styles related to the Recipes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.food-image{
+  width: auto;
+  height: 100%;
+  background-image: url('http://www.manusmenu.com/wp-content/uploads/2012/02/1-Satay-Chicken-1-1-of-1.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+
+}
+
+
+#recipe-heart{
+  color: black;
+}

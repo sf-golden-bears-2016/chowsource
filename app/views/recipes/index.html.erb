@@ -11,20 +11,18 @@
 <div class="container">
  <div class="row">
   <% @recipes.each do |recipe| %>
-  <div class="col-sm-3 col-lg-3 col-md-3">
-    <div class="thumbnail">
+  <div class="col-sm-4 col-lg-4 col-md-4">
+  <div><h3><a href="/recipes/<%= recipe.id %>"><%= recipe.name%></a></h3>
+    <div class="thumbnail food-image">
       <div class="caption" style="height: 250px";>
-       <h4 class="pull-right">♥️</h4>
+       <h2 class="pull-right">
+       <a href="#"><span id="recipe-heart" class="fa fa-heart-o"></span></a>
+       </h2>
        <h4 class="center">
-        <%= recipe.name%>
       </h4>
-
-  <!--     <form action="/recipes/<%#= recipe.id %>" method="post">
-        <input id="hidden" type="hidden" name="_method" value="put">
-        <button type="submit" class="btn btn-success">Buy</button>
-      </form> -->
-
     </div>
+    </div>
+
     <br>
   </div>
 </div>
