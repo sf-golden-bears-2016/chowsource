@@ -29,7 +29,7 @@ Preheat oven to 425 degrees F (220 degrees C).
 To Assemble Pizza: Spoon 1/4 of peanut sauce onto each pita. Sprinkle 1/4 of the browned chicken and 1/4 of the scallions on top of each. Top each 'pizza' with 1 slice cheese. Place on a lightly greased cookie sheet and bake in the preheated oven for 10 to 12 minutes, until the cheese is melted and bubbly. Let stand for 1 to 2 minutes outside of oven before you cut with a pizza cutter.",
     servings: rand(1..5),
     course: ["breakfast", "lunch", "dinner", "snacks"].sample,
-    image: "http://allrecipes.com/recipe/9021/satay-chicken-pizza/photos/259144/",
+    image: "http://www.manusmenu.com/wp-content/uploads/2012/02/1-Satay-Chicken-1-1-of-1.jpg",
     user_id: rand(1..20))
 end
 
