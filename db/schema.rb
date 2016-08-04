@@ -32,13 +32,6 @@ ActiveRecord::Schema.define(version: 20160803224511) do
     t.index ["user_id"], name: "index_menus_on_user_id", using: :btree
   end
 
-  create_table "menus_recipes", id: false, force: :cascade do |t|
-    t.integer "menu_id",   null: false
-    t.integer "recipe_id", null: false
-    t.index ["menu_id"], name: "index_menus_recipes_on_menu_id", using: :btree
-    t.index ["recipe_id"], name: "index_menus_recipes_on_recipe_id", using: :btree
-  end
-
   create_table "recipes", force: :cascade do |t|
     t.string   "name"
     t.integer  "prep_time"
