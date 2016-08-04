@@ -30,19 +30,12 @@
   </head>
 
   <body>
-
-	<ul>
-		<li><a href="/">Home</a></li>
 		<% if current_user %>
-			<li><a href="/recipes/new">New Recipes</a></li>
-			<li><a href="/menus/new">New Menu</a></li>
-			<li><a href="/sessions/<%= current_user.id %>">Profile</a></li>
-			<li><a href="/">Sign out</a></li>
-		<% else %>
-			<li><a href="/">Sign In</a></li>
+		<a href="/users/<%= current_user.id %>">Profile</a>
+		<a href="/">Log out</a>
 		<% end %>
-	</ul>
 
     <%= yield %>
+
   </body>
 </html>
