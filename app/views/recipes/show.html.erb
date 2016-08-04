@@ -1,0 +1,18 @@
+
+<h1><%= @recipe.name %></h1>
+<p>by: <a href="/users/<%= @recipe.user_id %>"><%= User.find_by(id: @recipe.user_id).name %></a></p>
+<ul>
+  <li><%= @recipe.prep_time %></li>
+  <li><%= @recipe.cook_time %></li>
+  <li><%= @recipe.ingredients %></li>
+  <li><%= @recipe.price %></li>
+  <li><%= @recipe.description %></li>
+  <li><%= @recipe.directions %></li>
+  <li><%= @recipe.servings %></li>
+  <li><%= @recipe.course %></li>
+</ul>
+
+
+<%= link_to "delete", recipe_path(@recipe), method: :delete, data: {confirm: "Really delete the recipe?"} %><br>
+<%= link_to "edit", edit_recipe_path(@recipe) %><br>
+<%= link_to "<< Back to Recipes List", recipes_path %>

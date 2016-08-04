@@ -1,0 +1,28 @@
+<% if session[:user_id] %>
+
+<h1><%= @user.name %>'s Profile</h1>
+<h4>Contributed Recipes:</h4>
+<ul>
+  <% @recipes.each do |recipe| %>
+  <li><%= recipe.name %></li>
+  <ul>
+    <li><b>Prep Time:</b> <%= recipe.prep_time %>min</li>
+    <li><b>Cook Time:</b> <%= recipe.cook_time %>min</li>
+    <li><b>Ingredients:</b> <%= recipe.ingredients %></li>
+    <li><b>Price:</b> $<%= recipe.price.round(2) %></li>
+    <li><b>Description:</b> <%= recipe.description %></li>
+    <li><b>Directions:</b> <%= recipe.directions %></li>
+    <li><b>Servings:</b> <%= recipe.servings %></li>
+    <li><b>Course:</b> <%= recipe.course %></li>
+  </ul>
+
+  <%= link_to 'Edit', edit_recipe_path(recipe) %> |
+  <%= link_to 'Back', recipe_path %>
+
+  <% end %>
+</ul>
+
+<% else %>
+Please <a href="/sessions/new">Sign In</a> to see your profile.
+
+<% end %>

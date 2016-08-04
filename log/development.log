@@ -1,4 +1,3 @@
-
 Started GET "/" for ::1 at 2016-08-03 12:08:54 -0700
 
 ActionController::RoutingError (uninitialized constant SessionsController):
@@ -1228,10 +1227,8 @@ ORDER BY c.conname
   [1m[35mSQL (21.6ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "bobsaget"], ["email", "bobbysags@gmail.com"], ["password_digest", "123"], ["created_at", 2016-08-03 23:09:53 UTC], ["updated_at", 2016-08-03 23:09:53 UTC]]
   [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
   [1m[36mUser Load (11.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
-<<<<<<< HEAD
->>>>>>> 10c87039574479da6dbbd1421ac210cf98c5c836
 Started GET "/auth/facebook" for ::1 at 2016-08-03 18:51:21 -0700
-  
+
 ActiveRecord::PendingMigrationError (
 
 Migrations are pending. To resolve this issue, run:
@@ -1239,7 +1236,7 @@ Migrations are pending. To resolve this issue, run:
 	bin/rails db:migrate RAILS_ENV=development
 
 ):
-  
+
 activerecord (5.0.0) lib/active_record/migration.rb:572:in `check_pending!'
 activerecord (5.0.0) lib/active_record/migration.rb:548:in `call'
 actionpack (5.0.0) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
@@ -1384,7 +1381,6 @@ FOREIGN KEY ("user_id")
   [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(3841712907833509065)[0m
   [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
   [1m[35m (2.4ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
->>>>>>> 967769a04dbfff59a8412c51caaf7fee1924cb8d
 FROM pg_constraint c
 JOIN pg_class t1 ON c.conrelid = t1.oid
 JOIN pg_class t2 ON c.confrelid = t2.oid
@@ -1396,11 +1392,8 @@ WHERE c.contype = 'f'
   AND t3.nspname = ANY (current_schemas(false))
 ORDER BY c.conname
 [0m
-<<<<<<< HEAD
   [1m[35m (1.9ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
-=======
   [1m[35m (2.0ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
->>>>>>> 967769a04dbfff59a8412c51caaf7fee1924cb8d
 FROM pg_constraint c
 JOIN pg_class t1 ON c.conrelid = t1.oid
 JOIN pg_class t2 ON c.confrelid = t2.oid
@@ -1448,7 +1441,6 @@ WHERE c.contype = 'f'
   AND t3.nspname = ANY (current_schemas(false))
 ORDER BY c.conname
 [0m
-<<<<<<< HEAD
 Started GET "/auth/facebook" for ::1 at 2016-08-03 18:52:13 -0700
   [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
 (facebook) Request phase initiated.
@@ -1460,9 +1452,9 @@ DEPRECATION WARNING: env is deprecated and will be removed from Rails 5.1 (calle
 Completed 500 Internal Server Error in 65ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
-  
+
 app/models/user.rb:11:in `from_omniauth'
 app/controllers/sessions_controller.rb:3:in `create'
   Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
@@ -1475,12 +1467,12 @@ app/controllers/sessions_controller.rb:3:in `create'
   Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (119.2ms)
 Started GET "/auth/facebook/callback?code=AQCLh3pKF9IuiiioDzrQv6edjgjUxft_EKAEYdvJk7DlSNP5cXLJONr_bqUV25eurpYUIZWZXzTlDXtPgEuZYbXwg_cjecMVqUBC7EcsVUAaRuxySEBotTOvP_3M0EUpVvqqjGNya_a54yNBFgbZGsDTHPbES5KrCpPZ-JAH5GUvUtp-j3F1gMKymueaaWTFRAkhCnHFIgiD8i36o1amwvJ5YySWDfJJumbZLZ7a8bsyJWXGDwa3-lvxuNT3eAIWud1cX8O4hbddv68AxbPKWRPtjdDImpQqnCOlQj692WRQtjw0kKJ1VkLtXLP1IFc8byU&state=68d3c9dc79fe83e0d3c0584109be1e3c5b100012b323adb1" for ::1 at 2016-08-03 18:55:15 -0700
 (facebook) Callback phase initiated.
-(facebook) Authentication failure! invalid_credentials: OAuth2::Error, {"message"=>"This authorization code has been used.", "type"=>"OAuthException", "code"=>100, "fbtrace_id"=>"BtMBnfxdyZd"}: 
+(facebook) Authentication failure! invalid_credentials: OAuth2::Error, {"message"=>"This authorization code has been used.", "type"=>"OAuthException", "code"=>100, "fbtrace_id"=>"BtMBnfxdyZd"}:
 {"error":{"message":"This authorization code has been used.","type":"OAuthException","code":100,"fbtrace_id":"BtMBnfxdyZd"}}
-  
-OAuth2::Error ({"message"=>"This authorization code has been used.", "type"=>"OAuthException", "code"=>100, "fbtrace_id"=>"BtMBnfxdyZd"}: 
+
+OAuth2::Error ({"message"=>"This authorization code has been used.", "type"=>"OAuthException", "code"=>100, "fbtrace_id"=>"BtMBnfxdyZd"}:
 {"error":{"message":"This authorization code has been used.","type":"OAuthException","code":100,"fbtrace_id":"BtMBnfxdyZd"}}):
-  
+
 oauth2 (1.2.0) lib/oauth2/client.rb:113:in `request'
 oauth2 (1.2.0) lib/oauth2/client.rb:138:in `get_token'
 oauth2 (1.2.0) lib/oauth2/strategy/auth_code.rb:29:in `get_token'
@@ -1552,9 +1544,9 @@ DEPRECATION WARNING: env is deprecated and will be removed from Rails 5.1 (calle
 Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
-  
+
 app/models/user.rb:11:in `from_omniauth'
 app/controllers/sessions_controller.rb:3:in `create'
   Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
@@ -1574,10 +1566,10 @@ Processing by SessionsController#create as HTML
 Completed 500 Internal Server Error in 41ms (ActiveRecord: 0.0ms)
 
 
-  
+
 NoMethodError (undefined method `find_or_create_from_auth_hash' for #<Class:0x007fd6b391b770>
 Did you mean?  find_or_create_by):
-  
+
 app/controllers/sessions_controller.rb:3:in `create'
   Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
   Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -1589,12 +1581,12 @@ app/controllers/sessions_controller.rb:3:in `create'
   Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (101.2ms)
 Started GET "/auth/facebook/callback?code=AQDBYQdc1jmeEIeZLxQzb4grnPSz5ZCICMUlWN23IGyCKpik_gpIEw0qRxKX8d5nSmpz4EfxIhsnZQh69duS4aYMCJiV2eR6F5pMyriWLDNytMsTWmMK0nN7kDJKY7_gjwFPrumfX8JJD3ECKdW_4WUIwF5PWFAAKcdOCp4oujkPNOhlSM4sAW7HvlbbYS9xme5_YB0NRpAYATPweI5EJDuuxd5zRg4DDBMEvzOWLqXDDdHedbg3Gx8r1TTY0lwNwcwcTZS5EoGyuanioZuKYRRQ7GNoQM1LL1RJYufLDc83Jbg54XUsyuINNjxO0ra0MQ0&state=c2ddbe7ed0bc09e287d48535d053d715b8b73bee1b16183f" for ::1 at 2016-08-03 19:25:53 -0700
 (facebook) Callback phase initiated.
-(facebook) Authentication failure! invalid_credentials: OAuth2::Error, {"message"=>"This authorization code has been used.", "type"=>"OAuthException", "code"=>100, "fbtrace_id"=>"H/XSKStyM0X"}: 
+(facebook) Authentication failure! invalid_credentials: OAuth2::Error, {"message"=>"This authorization code has been used.", "type"=>"OAuthException", "code"=>100, "fbtrace_id"=>"H/XSKStyM0X"}:
 {"error":{"message":"This authorization code has been used.","type":"OAuthException","code":100,"fbtrace_id":"H\/XSKStyM0X"}}
-  
-OAuth2::Error ({"message"=>"This authorization code has been used.", "type"=>"OAuthException", "code"=>100, "fbtrace_id"=>"H/XSKStyM0X"}: 
+
+OAuth2::Error ({"message"=>"This authorization code has been used.", "type"=>"OAuthException", "code"=>100, "fbtrace_id"=>"H/XSKStyM0X"}:
 {"error":{"message":"This authorization code has been used.","type":"OAuthException","code":100,"fbtrace_id":"H\/XSKStyM0X"}}):
-  
+
 oauth2 (1.2.0) lib/oauth2/client.rb:113:in `request'
 oauth2 (1.2.0) lib/oauth2/client.rb:138:in `get_token'
 oauth2 (1.2.0) lib/oauth2/strategy/auth_code.rb:29:in `get_token'
@@ -1665,10 +1657,10 @@ Processing by SessionsController#create as HTML
 Completed 500 Internal Server Error in 41ms (ActiveRecord: 0.0ms)
 
 
-  
+
 NoMethodError (undefined method `find_or_create_from_auth_hash' for #<Class:0x007fd6b0f775b8>
 Did you mean?  find_or_create_by):
-  
+
 app/controllers/sessions_controller.rb:4:in `create'
   Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
   Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -1680,12 +1672,12 @@ app/controllers/sessions_controller.rb:4:in `create'
   Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (95.0ms)
 Started GET "/auth/facebook/callback?code=AQBWn76z_n9gftbuhDKmE-B4c-uXNCgW4i81BB51gjyhMPH-kNNLCFNQpUoMThubnoIOzu3Ksj7ZIAJiy4KM0HrU8unLlUhonaDTxPyB21faCkt78rG9dtdFe4LvKjs74TAiyatjMnZ-XphQz20AgjTiP2NvIP-S5clAs7_9v1wB_aOeiKZ8CnbBYptUtWZjv6PucoWaK3P5PuC0Tjfaa8Sj8iyGAefuZWkfBqIU9F4L68XiAu9CKnw7Jj9zO-CO-w9dwZsgkvUJ_TGItgmLH9ZITyMxHJzIOyJ4PU0p535B_K0oQvRr5zupQkPmLznFEZ4&state=544eb0422e3c9d3bfced0c1d4ff4a648026f0c0d2030950f" for ::1 at 2016-08-03 19:28:27 -0700
 (facebook) Callback phase initiated.
-(facebook) Authentication failure! invalid_credentials: OAuth2::Error, {"message"=>"This authorization code has been used.", "type"=>"OAuthException", "code"=>100, "fbtrace_id"=>"AUXWpQfZrgS"}: 
+(facebook) Authentication failure! invalid_credentials: OAuth2::Error, {"message"=>"This authorization code has been used.", "type"=>"OAuthException", "code"=>100, "fbtrace_id"=>"AUXWpQfZrgS"}:
 {"error":{"message":"This authorization code has been used.","type":"OAuthException","code":100,"fbtrace_id":"AUXWpQfZrgS"}}
-  
-OAuth2::Error ({"message"=>"This authorization code has been used.", "type"=>"OAuthException", "code"=>100, "fbtrace_id"=>"AUXWpQfZrgS"}: 
+
+OAuth2::Error ({"message"=>"This authorization code has been used.", "type"=>"OAuthException", "code"=>100, "fbtrace_id"=>"AUXWpQfZrgS"}:
 {"error":{"message":"This authorization code has been used.","type":"OAuthException","code":100,"fbtrace_id":"AUXWpQfZrgS"}}):
-  
+
 oauth2 (1.2.0) lib/oauth2/client.rb:113:in `request'
 oauth2 (1.2.0) lib/oauth2/client.rb:138:in `get_token'
 oauth2 (1.2.0) lib/oauth2/strategy/auth_code.rb:29:in `get_token'
@@ -1758,10 +1750,10 @@ Processing by SessionsController#create as HTML
 Completed 500 Internal Server Error in 44ms (ActiveRecord: 0.0ms)
 
 
-  
+
 NoMethodError (undefined method `find_or_create_from_auth_hash' for #<Class:0x007fd6b0c1ff00>
 Did you mean?  find_or_create_by):
-  
+
 app/controllers/sessions_controller.rb:4:in `create'
   Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
   Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -1780,10 +1772,10 @@ Processing by SessionsController#create as HTML
 Completed 500 Internal Server Error in 48ms (ActiveRecord: 0.0ms)
 
 
-  
+
 NoMethodError (undefined method `find_or_create_from_auth_hash' for #<Class:0x007fd6b104c858>
 Did you mean?  find_or_create_by):
-  
+
 app/controllers/sessions_controller.rb:4:in `create'
   Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
   Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -1795,12 +1787,12 @@ app/controllers/sessions_controller.rb:4:in `create'
   Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (102.1ms)
 Started GET "/auth/facebook/callback?code=AQBb-zMHXcYfzvFVhLxoyAZrAvqU0Hv2UiowXnqY1e7pPQI2KrRhur637iSimFHYONxwoAtyRQUAZ8nR3Lcii8c8SVtx2cxQVGWxMRjqLAoUShMfW3G_nz4P8GSt-Dzfk_OUxDU8nbj6sx7wT3UUL1Iv93VX72yKya3zvKK-kKBLSwUyyElM2Xt1lrSDMN8WjW4oFlrBH9KM7LL5eNwiaEZRfeDOi27-H4oGj0kNrJGA79xQCwaqMbnmzI3__qEzExduo2w6d9KjAs3iizo1Cy2zLX7_l5yBruQG2ugsjWlTR9rs0p8z2KxabLuZHvBXRJ0&state=b4a28cb629500fa944aa6539bbd3c802a2646d11579d4cdc" for ::1 at 2016-08-03 19:35:01 -0700
 (facebook) Callback phase initiated.
-(facebook) Authentication failure! invalid_credentials: OAuth2::Error, {"message"=>"This authorization code has been used.", "type"=>"OAuthException", "code"=>100, "fbtrace_id"=>"HTu3NbrC6nM"}: 
+(facebook) Authentication failure! invalid_credentials: OAuth2::Error, {"message"=>"This authorization code has been used.", "type"=>"OAuthException", "code"=>100, "fbtrace_id"=>"HTu3NbrC6nM"}:
 {"error":{"message":"This authorization code has been used.","type":"OAuthException","code":100,"fbtrace_id":"HTu3NbrC6nM"}}
-  
-OAuth2::Error ({"message"=>"This authorization code has been used.", "type"=>"OAuthException", "code"=>100, "fbtrace_id"=>"HTu3NbrC6nM"}: 
+
+OAuth2::Error ({"message"=>"This authorization code has been used.", "type"=>"OAuthException", "code"=>100, "fbtrace_id"=>"HTu3NbrC6nM"}:
 {"error":{"message":"This authorization code has been used.","type":"OAuthException","code":100,"fbtrace_id":"HTu3NbrC6nM"}}):
-  
+
 oauth2 (1.2.0) lib/oauth2/client.rb:113:in `request'
 oauth2 (1.2.0) lib/oauth2/client.rb:138:in `get_token'
 oauth2 (1.2.0) lib/oauth2/strategy/auth_code.rb:29:in `get_token'
@@ -1864,12 +1856,12 @@ puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
   Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (101.5ms)
 Started GET "/auth/facebook/callback?code=AQBb-zMHXcYfzvFVhLxoyAZrAvqU0Hv2UiowXnqY1e7pPQI2KrRhur637iSimFHYONxwoAtyRQUAZ8nR3Lcii8c8SVtx2cxQVGWxMRjqLAoUShMfW3G_nz4P8GSt-Dzfk_OUxDU8nbj6sx7wT3UUL1Iv93VX72yKya3zvKK-kKBLSwUyyElM2Xt1lrSDMN8WjW4oFlrBH9KM7LL5eNwiaEZRfeDOi27-H4oGj0kNrJGA79xQCwaqMbnmzI3__qEzExduo2w6d9KjAs3iizo1Cy2zLX7_l5yBruQG2ugsjWlTR9rs0p8z2KxabLuZHvBXRJ0&state=b4a28cb629500fa944aa6539bbd3c802a2646d11579d4cdc" for ::1 at 2016-08-03 19:35:29 -0700
 (facebook) Callback phase initiated.
-(facebook) Authentication failure! invalid_credentials: OAuth2::Error, {"message"=>"This authorization code has expired.", "type"=>"OAuthException", "code"=>100, "fbtrace_id"=>"Em5pWvEpt8t"}: 
+(facebook) Authentication failure! invalid_credentials: OAuth2::Error, {"message"=>"This authorization code has expired.", "type"=>"OAuthException", "code"=>100, "fbtrace_id"=>"Em5pWvEpt8t"}:
 {"error":{"message":"This authorization code has expired.","type":"OAuthException","code":100,"fbtrace_id":"Em5pWvEpt8t"}}
-  
-OAuth2::Error ({"message"=>"This authorization code has expired.", "type"=>"OAuthException", "code"=>100, "fbtrace_id"=>"Em5pWvEpt8t"}: 
+
+OAuth2::Error ({"message"=>"This authorization code has expired.", "type"=>"OAuthException", "code"=>100, "fbtrace_id"=>"Em5pWvEpt8t"}:
 {"error":{"message":"This authorization code has expired.","type":"OAuthException","code":100,"fbtrace_id":"Em5pWvEpt8t"}}):
-  
+
 oauth2 (1.2.0) lib/oauth2/client.rb:113:in `request'
 oauth2 (1.2.0) lib/oauth2/client.rb:138:in `get_token'
 oauth2 (1.2.0) lib/oauth2/strategy/auth_code.rb:29:in `get_token'
@@ -1933,12 +1925,12 @@ puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
   Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (102.4ms)
 Started GET "/auth/facebook/callback?code=AQBb-zMHXcYfzvFVhLxoyAZrAvqU0Hv2UiowXnqY1e7pPQI2KrRhur637iSimFHYONxwoAtyRQUAZ8nR3Lcii8c8SVtx2cxQVGWxMRjqLAoUShMfW3G_nz4P8GSt-Dzfk_OUxDU8nbj6sx7wT3UUL1Iv93VX72yKya3zvKK-kKBLSwUyyElM2Xt1lrSDMN8WjW4oFlrBH9KM7LL5eNwiaEZRfeDOi27-H4oGj0kNrJGA79xQCwaqMbnmzI3__qEzExduo2w6d9KjAs3iizo1Cy2zLX7_l5yBruQG2ugsjWlTR9rs0p8z2KxabLuZHvBXRJ0&state=b4a28cb629500fa944aa6539bbd3c802a2646d11579d4cdc" for ::1 at 2016-08-03 19:35:41 -0700
 (facebook) Callback phase initiated.
-(facebook) Authentication failure! invalid_credentials: OAuth2::Error, {"message"=>"This authorization code has expired.", "type"=>"OAuthException", "code"=>100, "fbtrace_id"=>"DCCJTfZtjXj"}: 
+(facebook) Authentication failure! invalid_credentials: OAuth2::Error, {"message"=>"This authorization code has expired.", "type"=>"OAuthException", "code"=>100, "fbtrace_id"=>"DCCJTfZtjXj"}:
 {"error":{"message":"This authorization code has expired.","type":"OAuthException","code":100,"fbtrace_id":"DCCJTfZtjXj"}}
-  
-OAuth2::Error ({"message"=>"This authorization code has expired.", "type"=>"OAuthException", "code"=>100, "fbtrace_id"=>"DCCJTfZtjXj"}: 
+
+OAuth2::Error ({"message"=>"This authorization code has expired.", "type"=>"OAuthException", "code"=>100, "fbtrace_id"=>"DCCJTfZtjXj"}:
 {"error":{"message":"This authorization code has expired.","type":"OAuthException","code":100,"fbtrace_id":"DCCJTfZtjXj"}}):
-  
+
 oauth2 (1.2.0) lib/oauth2/client.rb:113:in `request'
 oauth2 (1.2.0) lib/oauth2/client.rb:138:in `get_token'
 oauth2 (1.2.0) lib/oauth2/strategy/auth_code.rb:29:in `get_token'
@@ -2009,11 +2001,11 @@ Processing by SessionsController#create as HTML
 Completed 500 Internal Server Error in 36ms (ActiveRecord: 0.0ms)
 
 
-  
+
 NoMethodError (undefined method `P' for #<SessionsController:0x007fd6b3c41350>
 Did you mean?  p
                pp):
-  
+
 app/controllers/sessions_controller.rb:3:in `create'
   Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
   Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -2032,14 +2024,14 @@ Processing by SessionsController#create as HTML
 Completed 406 Not Acceptable in 60ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionController::UnknownFormat (SessionsController#create is missing a template for this request format and variant.
 
 request.formats: ["text/html"]
 request.variant: []
 
 NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not… nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
-  
+
 actionpack (5.0.0) lib/action_controller/metal/implicit_render.rb:56:in `default_render'
 actionpack (5.0.0) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
 actionpack (5.0.0) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
@@ -2141,14 +2133,14 @@ Processing by SessionsController#create as HTML
 Completed 406 Not Acceptable in 65ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionController::UnknownFormat (SessionsController#create is missing a template for this request format and variant.
 
 request.formats: ["text/html"]
 request.variant: []
 
 NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not… nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
-  
+
 actionpack (5.0.0) lib/action_controller/metal/implicit_render.rb:56:in `default_render'
 actionpack (5.0.0) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
 actionpack (5.0.0) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
@@ -2234,12 +2226,12 @@ puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
 Started GET "/auth/facebook/callback?code=AQBVXqndkKw4Bnm0p3CZKgje2HMAG0Er1UG0-CIVdhwAwPAnASna3KXib8EtBxgXPKRGyps_J7KmgjE6mrkmWfYAc0CEtUwjA9FNdxW00wbuKa0Qpbki2gcZl84pbcEZQyErMAVdtuK0w4pMTm5d6-z_M07LeaL9yQ_OrKCWi8i_1uQS42yJ-OtUKRYGii9HMC8yeLI4SHn0BSwaK1aVKKiySjTrY2-O0V4Eb5-6VOdR5iHOqM5DgBz-YZIUTcDzp9ShsgzbD9qDjC1ljm2YtEaMVex5MbDJHK5GJSuzepYdOzRy6wNLhv0o48482mX1Gk4&state=6fcb2936e71f64a2b9f49eadac9462f8eca6cd4eb0e37a44" for ::1 at 2016-08-03 19:36:57 -0700
 (facebook) Callback phase initiated.
   Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
-(facebook) Authentication failure! invalid_credentials: OAuth2::Error, {"message"=>"This authorization code has been used.", "type"=>"OAuthException", "code"=>100, "fbtrace_id"=>"DiEZ4RDrZyF"}: 
+(facebook) Authentication failure! invalid_credentials: OAuth2::Error, {"message"=>"This authorization code has been used.", "type"=>"OAuthException", "code"=>100, "fbtrace_id"=>"DiEZ4RDrZyF"}:
 {"error":{"message":"This authorization code has been used.","type":"OAuthException","code":100,"fbtrace_id":"DiEZ4RDrZyF"}}
-  
-OAuth2::Error ({"message"=>"This authorization code has been used.", "type"=>"OAuthException", "code"=>100, "fbtrace_id"=>"DiEZ4RDrZyF"}: 
+
+OAuth2::Error ({"message"=>"This authorization code has been used.", "type"=>"OAuthException", "code"=>100, "fbtrace_id"=>"DiEZ4RDrZyF"}:
 {"error":{"message":"This authorization code has been used.","type":"OAuthException","code":100,"fbtrace_id":"DiEZ4RDrZyF"}}):
-  
+
 oauth2 (1.2.0) lib/oauth2/client.rb:113:in `request'
   Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
 oauth2 (1.2.0) lib/oauth2/client.rb:138:in `get_token'
@@ -2317,14 +2309,14 @@ Processing by SessionsController#create as HTML
 Completed 406 Not Acceptable in 64ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionController::UnknownFormat (SessionsController#create is missing a template for this request format and variant.
 
 request.formats: ["text/html"]
 request.variant: []
 
 NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not… nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
-  
+
 actionpack (5.0.0) lib/action_controller/metal/implicit_render.rb:56:in `default_render'
 actionpack (5.0.0) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
 actionpack (5.0.0) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
@@ -2417,12 +2409,12 @@ puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
   Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (105.1ms)
 Started GET "/auth/facebook/callback?code=AQApMkIp-Gv1Id8P6FN485zJGU181CYgIrs6xt1KlbvHU2yo6T5_wbngp6e-TKjdVisPncXo0fGIJzHIwrCKa7ihKN-NNd_MYnYk7FRh4LKPswZk4XYxGGseLhyna2Gi1DvzUWBaDR-Sa40oaEgaZSUSDoaUZNMoBjxmwqL08E32TTymhi1ioM6Y2zU6CUciafWYomd313a7WtdmheFVWpwbjyiZrzjPKqAwHGJx8Wb8YzpPjoHBe2z0j3_njRLeapZcjs6f8l_SrhkVdalN8wRyPfM7IRhg_L7JBkcuFLhSD2zrlR6EapSPDEZPYumAB7w&state=308b848a0f661549661758821ddbd3c8868852258f890fbf" for ::1 at 2016-08-03 19:39:57 -0700
 (facebook) Callback phase initiated.
-(facebook) Authentication failure! invalid_credentials: OAuth2::Error, {"message"=>"This authorization code has been used.", "type"=>"OAuthException", "code"=>100, "fbtrace_id"=>"Ez5R7nwzo7X"}: 
+(facebook) Authentication failure! invalid_credentials: OAuth2::Error, {"message"=>"This authorization code has been used.", "type"=>"OAuthException", "code"=>100, "fbtrace_id"=>"Ez5R7nwzo7X"}:
 {"error":{"message":"This authorization code has been used.","type":"OAuthException","code":100,"fbtrace_id":"Ez5R7nwzo7X"}}
-  
-OAuth2::Error ({"message"=>"This authorization code has been used.", "type"=>"OAuthException", "code"=>100, "fbtrace_id"=>"Ez5R7nwzo7X"}: 
+
+OAuth2::Error ({"message"=>"This authorization code has been used.", "type"=>"OAuthException", "code"=>100, "fbtrace_id"=>"Ez5R7nwzo7X"}:
 {"error":{"message":"This authorization code has been used.","type":"OAuthException","code":100,"fbtrace_id":"Ez5R7nwzo7X"}}):
-  
+
 oauth2 (1.2.0) lib/oauth2/client.rb:113:in `request'
 oauth2 (1.2.0) lib/oauth2/client.rb:138:in `get_token'
 oauth2 (1.2.0) lib/oauth2/strategy/auth_code.rb:29:in `get_token'
@@ -2493,14 +2485,14 @@ Processing by SessionsController#create as HTML
 Completed 406 Not Acceptable in 63ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionController::UnknownFormat (SessionsController#create is missing a template for this request format and variant.
 
 request.formats: ["text/html"]
 request.variant: []
 
 NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not… nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
-  
+
 actionpack (5.0.0) lib/action_controller/metal/implicit_render.rb:56:in `default_render'
 actionpack (5.0.0) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
 actionpack (5.0.0) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
@@ -2600,14 +2592,14 @@ Processing by SessionsController#create as HTML
 Completed 406 Not Acceptable in 59ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionController::UnknownFormat (SessionsController#create is missing a template for this request format and variant.
 
 request.formats: ["text/html"]
 request.variant: []
 
 NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not… nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
-  
+
 actionpack (5.0.0) lib/action_controller/metal/implicit_render.rb:56:in `default_render'
 actionpack (5.0.0) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
 actionpack (5.0.0) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
@@ -2709,14 +2701,14 @@ Processing by SessionsController#create as HTML
 Completed 406 Not Acceptable in 58ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionController::UnknownFormat (SessionsController#create is missing a template for this request format and variant.
 
 request.formats: ["text/html"]
 request.variant: []
 
 NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not… nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
-  
+
 actionpack (5.0.0) lib/action_controller/metal/implicit_render.rb:56:in `default_render'
 actionpack (5.0.0) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
 actionpack (5.0.0) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
@@ -3176,7 +3168,6 @@ Migrating to CreateUsers (20160803224253)
 Migrating to CreateMenus (20160803224329)
   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
   [1m[35m (4.2ms)[0m  [1m[35mCREATE TABLE "menus" ("id" serial primary key, "user_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_c38eb0f938"
->>>>>>> 967769a04dbfff59a8412c51caaf7fee1924cb8d
 FOREIGN KEY ("user_id")
   REFERENCES "users" ("id")
 )[0m
@@ -3184,7 +3175,6 @@ FOREIGN KEY ("user_id")
   [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20160803224329"]]
   [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
 Migrating to CreateMenuRecipes (20160803224425)
-<<<<<<< HEAD
   [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
   [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "menus_recipes" ("menu_id" integer NOT NULL, "recipe_id" integer NOT NULL)[0m
   [1m[35m (1.0ms)[0m  [1m[35mCREATE  INDEX  "index_menus_recipes_on_menu_id" ON "menus_recipes"  ("menu_id")[0m
@@ -3214,7 +3204,6 @@ FOREIGN KEY ("user_id")
   [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(3841712907833509065)[0m
   [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
   [1m[35m (2.4ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
-=======
   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
   [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "menus_recipes" ("menu_id" integer NOT NULL, "recipe_id" integer NOT NULL)[0m
   [1m[35m (0.9ms)[0m  [1m[35mCREATE  INDEX  "index_menus_recipes_on_menu_id" ON "menus_recipes"  ("menu_id")[0m
@@ -3256,11 +3245,8 @@ WHERE c.contype = 'f'
   AND t3.nspname = ANY (current_schemas(false))
 ORDER BY c.conname
 [0m
-<<<<<<< HEAD
   [1m[35m (1.9ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
-=======
   [1m[35m (2.6ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
->>>>>>> 967769a04dbfff59a8412c51caaf7fee1924cb8d
 FROM pg_constraint c
 JOIN pg_class t1 ON c.conrelid = t1.oid
 JOIN pg_class t2 ON c.confrelid = t2.oid
@@ -3272,11 +3258,8 @@ WHERE c.contype = 'f'
   AND t3.nspname = ANY (current_schemas(false))
 ORDER BY c.conname
 [0m
-<<<<<<< HEAD
   [1m[35m (1.9ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
-=======
   [1m[35m (2.2ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
->>>>>>> 967769a04dbfff59a8412c51caaf7fee1924cb8d
 FROM pg_constraint c
 JOIN pg_class t1 ON c.conrelid = t1.oid
 JOIN pg_class t2 ON c.confrelid = t2.oid
@@ -3288,11 +3271,8 @@ WHERE c.contype = 'f'
   AND t3.nspname = ANY (current_schemas(false))
 ORDER BY c.conname
 [0m
-<<<<<<< HEAD
   [1m[35m (1.8ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
-=======
   [1m[35m (2.3ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
->>>>>>> 967769a04dbfff59a8412c51caaf7fee1924cb8d
 FROM pg_constraint c
 JOIN pg_class t1 ON c.conrelid = t1.oid
 JOIN pg_class t2 ON c.confrelid = t2.oid
@@ -3304,11 +3284,8 @@ WHERE c.contype = 'f'
   AND t3.nspname = ANY (current_schemas(false))
 ORDER BY c.conname
 [0m
-<<<<<<< HEAD
   [1m[35m (1.8ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
-=======
   [1m[35m (2.0ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
->>>>>>> 967769a04dbfff59a8412c51caaf7fee1924cb8d
 FROM pg_constraint c
 JOIN pg_class t1 ON c.conrelid = t1.oid
 JOIN pg_class t2 ON c.confrelid = t2.oid
@@ -3320,7 +3297,6 @@ WHERE c.contype = 'f'
   AND t3.nspname = ANY (current_schemas(false))
 ORDER BY c.conname
 [0m
-<<<<<<< HEAD
 Started GET "/" for ::1 at 2016-08-03 19:58:36 -0700
   [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
 Processing by SessionsController#login as HTML
@@ -3387,9 +3363,9 @@ Processing by SessionsController#create as HTML
 Completed 500 Internal Server Error in 86ms (ActiveRecord: 5.1ms)
 
 
-  
+
 NoMethodError (undefined method `login' for #<SessionsController:0x007fab98393730>):
-  
+
 app/controllers/sessions_controller.rb:10:in `create'
   Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
   Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -3408,9 +3384,9 @@ Processing by SessionsController#create as HTML
 Completed 500 Internal Server Error in 53ms (ActiveRecord: 1.0ms)
 
 
-  
+
 NoMethodError (undefined method `login' for #<SessionsController:0x007fab9bd452f8>):
-  
+
 app/controllers/sessions_controller.rb:10:in `create'
   Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
   Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -3437,9 +3413,9 @@ Processing by SessionsController#create as HTML
 Completed 500 Internal Server Error in 44ms (ActiveRecord: 1.1ms)
 
 
-  
+
 NoMethodError (undefined method `login' for #<SessionsController:0x007fab98d70a28>):
-  
+
 app/controllers/sessions_controller.rb:10:in `create'
   Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
   Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -3450,10 +3426,10 @@ app/controllers/sessions_controller.rb:10:in `create'
   Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
   Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (134.0ms)
 Started GET "/auth/facebook/callback?code=AQCJumA0T89TXcpy8c7upL-Yb9P4LpTeGqAWBcBbMdqtakAh6-7RrKFLBNd4UKYmBHvsYVovoUfRgZFxacQXJVTm1URpNE3yoEp7B4tFbueWWHEw_LC1KmlPbOAnsAjxw4x_aSbFq3rNtylWVLBFNG2Kk65h9KQRPtvApenkAB0f5fq2H3Cfm_iivjZ1sLL8mrju188bnDLIMNmvaF3jtI38XssaJQzUxo7WWCvb_kEw8hr26rKCxUTDiCTNM3qq8hMJ9yzeK6Wxo--IrjxDteeU7Tlg2zayGj5LqyDagZOJkzzyi0vHEADpMyLwuX47UuY&state=d1d72bff19cc4166a1c03beef80ef4e1a77cd03c0c4ba167" for ::1 at 2016-08-03 20:05:41 -0700
-  
-OAuth2::Error ({"message"=>"This authorization code has been used.", "type"=>"OAuthException", "code"=>100, "fbtrace_id"=>"CYhpXF9migr"}: 
+
+OAuth2::Error ({"message"=>"This authorization code has been used.", "type"=>"OAuthException", "code"=>100, "fbtrace_id"=>"CYhpXF9migr"}:
 {"error":{"message":"This authorization code has been used.","type":"OAuthException","code":100,"fbtrace_id":"CYhpXF9migr"}}):
-  
+
 oauth2 (1.2.0) lib/oauth2/client.rb:113:in `request'
 oauth2 (1.2.0) lib/oauth2/client.rb:138:in `get_token'
 oauth2 (1.2.0) lib/oauth2/strategy/auth_code.rb:29:in `get_token'
@@ -3522,11 +3498,11 @@ Processing by SessionsController#login as HTML
 Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
 
 
-  
+
 SyntaxError (/Users/apprentice/Desktop/chowsource/app/views/sessions/login.html.erb:4: syntax error, unexpected tSTRING_DEND, expecting ']'
 ...append=( User.find(session[:id}).name );@output_buffer.safe_...
 ...                               ^):
-  
+
 app/views/sessions/login.html.erb:4: syntax error, unexpected tSTRING_DEND, expecting ']'
   Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
   Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -16025,7 +16001,6 @@ ORDER BY c.conname
   [1m[36mLove Load (0.7ms)[0m  [1m[34mSELECT "loves".* FROM "loves"[0m
   [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
   [1m[36mMenuRecipe Load (0.5ms)[0m  [1m[34mSELECT "menu_recipes".* FROM "menu_recipes"[0m
->>>>>>> 967769a04dbfff59a8412c51caaf7fee1924cb8d
 Started GET "/" for ::1 at 2016-08-04 10:29:09 -0700
   [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
 Processing by SessionsController#login as HTML
@@ -16067,9 +16042,9 @@ Processing by SessionsController#login as HTML
 Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ArgumentError (wrong number of arguments (given 0, expected 1)):
-  
+
 app/helpers/sessions_helper.rb:2:in `login'
   Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
   Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -16084,9 +16059,9 @@ Processing by SessionsController#login as HTML
 Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ArgumentError (wrong number of arguments (given 0, expected 1)):
-  
+
 app/helpers/sessions_helper.rb:2:in `login'
   Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
   Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -16101,9 +16076,9 @@ Processing by SessionsController#login as HTML
 Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ArgumentError (wrong number of arguments (given 0, expected 1)):
-  
+
 app/helpers/sessions_helper.rb:2:in `login'
   Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
   Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -16118,9 +16093,9 @@ Processing by SessionsController#login as HTML
 Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ArgumentError (wrong number of arguments (given 0, expected 1)):
-  
+
 app/helpers/sessions_helper.rb:2:in `login'
   Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
   Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -16135,9 +16110,9 @@ Processing by SessionsController#login as HTML
 Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ArgumentError (wrong number of arguments (given 0, expected 1)):
-  
+
 app/helpers/sessions_helper.rb:2:in `login'
   Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
   Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -16437,3 +16412,6 @@ Processing by SessionsController#login as HTML
 Completed 200 OK in 23ms (Views: 20.7ms | ActiveRecord: 0.4ms)
 
 
+=======
+>>>>>>> a0b78a1f259ae636c05b63a67ff8da7206c5022a
+>>>>>>> a0f8dc1ee62117bcb1bd1d4af4dbcc9ebea5d416
