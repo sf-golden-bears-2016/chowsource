@@ -1,9 +1,44 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
-# User.create(username: "bobsaget", email: "bobbysags@gmail.com", password_digest: "123")
-# Recipe.create(name: "Chicken Parmesan", prep_time: 10, cook_time: 20, ingredients: "1/2 Chicken breast, 2 tbsp")
+require 'faker'
+
+20.times do
+  User.create(
+    username: Faker::Name.name,
+    email: Faker::Internet.email,
+    password_digest: '123'
+    )
+end
+
+10.times do
+  Menu.create(
+    user_id: rand(1..20)
+    )
+end
+
+50.times do
+  Recipe.create(
+    name: Faker::SlackEmoji.food_and_drink,
+    prep_time: rand(5..45),
+    cook_time: rand(10..45),
+    ingredients: "1 apple, 2 bananas, 3 oranges",
+    price: rand(5..45),
+    description: "this is the description for this amazing recipe",
+    directions: "these are the directions to this amazing recipe",
+    servings: rand(1..5),
+    course: ["breakfast", "lunch", "dinner", "snacks"].sample,
+    image: "This is an Image",
+    user_id: rand(1..20))
+end
+
+30.times do
+  MenuRecipe.create(
+    menu_id: rand(1..20),
+    recipe_id: rand(1..50)
+    )
+end
+
+100.times do
+  Love.create(
+    user_id: rand(1..20),
+    recipe_id: rand(1..50)
+    )
+end
