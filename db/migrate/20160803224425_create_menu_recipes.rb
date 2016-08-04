@@ -1,9 +1,8 @@
 class CreateMenuRecipes < ActiveRecord::Migration[5.0]
   def change
-
-    create_join_table :menus, :recipes do |t|
-      t.index :menu_id
-      t.index :recipe_id
+    create_table :menu_recipes do |t|
+      t.integer :menu_id
+      t.integer :recipe_id
     end
   end
 end
