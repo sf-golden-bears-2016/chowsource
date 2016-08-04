@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-
 Started GET "/" for ::1 at 2016-08-03 12:08:54 -0700
 
 ActionController::RoutingError (uninitialized constant SessionsController):
@@ -1230,10 +1227,8 @@ ORDER BY c.conname
   [1m[35mSQL (21.6ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "bobsaget"], ["email", "bobbysags@gmail.com"], ["password_digest", "123"], ["created_at", 2016-08-03 23:09:53 UTC], ["updated_at", 2016-08-03 23:09:53 UTC]]
   [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
   [1m[36mUser Load (11.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
-<<<<<<< HEAD
->>>>>>> 10c87039574479da6dbbd1421ac210cf98c5c836
 Started GET "/auth/facebook" for ::1 at 2016-08-03 18:51:21 -0700
-  
+
 ActiveRecord::PendingMigrationError (
 
 Migrations are pending. To resolve this issue, run:
@@ -1241,7 +1236,7 @@ Migrations are pending. To resolve this issue, run:
 	bin/rails db:migrate RAILS_ENV=development
 
 ):
-  
+
 activerecord (5.0.0) lib/active_record/migration.rb:572:in `check_pending!'
 activerecord (5.0.0) lib/active_record/migration.rb:548:in `call'
 actionpack (5.0.0) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
@@ -1386,7 +1381,6 @@ FOREIGN KEY ("user_id")
   [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(3841712907833509065)[0m
   [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
   [1m[35m (2.4ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
->>>>>>> 967769a04dbfff59a8412c51caaf7fee1924cb8d
 FROM pg_constraint c
 JOIN pg_class t1 ON c.conrelid = t1.oid
 JOIN pg_class t2 ON c.confrelid = t2.oid
@@ -1398,11 +1392,8 @@ WHERE c.contype = 'f'
   AND t3.nspname = ANY (current_schemas(false))
 ORDER BY c.conname
 [0m
-<<<<<<< HEAD
   [1m[35m (1.9ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
-=======
   [1m[35m (2.0ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
->>>>>>> 967769a04dbfff59a8412c51caaf7fee1924cb8d
 FROM pg_constraint c
 JOIN pg_class t1 ON c.conrelid = t1.oid
 JOIN pg_class t2 ON c.confrelid = t2.oid
@@ -1450,7 +1441,6 @@ WHERE c.contype = 'f'
   AND t3.nspname = ANY (current_schemas(false))
 ORDER BY c.conname
 [0m
-<<<<<<< HEAD
 Started GET "/auth/facebook" for ::1 at 2016-08-03 18:52:13 -0700
   [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
 (facebook) Request phase initiated.
@@ -1462,9 +1452,9 @@ DEPRECATION WARNING: env is deprecated and will be removed from Rails 5.1 (calle
 Completed 500 Internal Server Error in 65ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
-  
+
 app/models/user.rb:11:in `from_omniauth'
 app/controllers/sessions_controller.rb:3:in `create'
   Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
@@ -1477,12 +1467,12 @@ app/controllers/sessions_controller.rb:3:in `create'
   Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (119.2ms)
 Started GET "/auth/facebook/callback?code=AQCLh3pKF9IuiiioDzrQv6edjgjUxft_EKAEYdvJk7DlSNP5cXLJONr_bqUV25eurpYUIZWZXzTlDXtPgEuZYbXwg_cjecMVqUBC7EcsVUAaRuxySEBotTOvP_3M0EUpVvqqjGNya_a54yNBFgbZGsDTHPbES5KrCpPZ-JAH5GUvUtp-j3F1gMKymueaaWTFRAkhCnHFIgiD8i36o1amwvJ5YySWDfJJumbZLZ7a8bsyJWXGDwa3-lvxuNT3eAIWud1cX8O4hbddv68AxbPKWRPtjdDImpQqnCOlQj692WRQtjw0kKJ1VkLtXLP1IFc8byU&state=68d3c9dc79fe83e0d3c0584109be1e3c5b100012b323adb1" for ::1 at 2016-08-03 18:55:15 -0700
 (facebook) Callback phase initiated.
-(facebook) Authentication failure! invalid_credentials: OAuth2::Error, {"message"=>"This authorization code has been used.", "type"=>"OAuthException", "code"=>100, "fbtrace_id"=>"BtMBnfxdyZd"}: 
+(facebook) Authentication failure! invalid_credentials: OAuth2::Error, {"message"=>"This authorization code has been used.", "type"=>"OAuthException", "code"=>100, "fbtrace_id"=>"BtMBnfxdyZd"}:
 {"error":{"message":"This authorization code has been used.","type":"OAuthException","code":100,"fbtrace_id":"BtMBnfxdyZd"}}
-  
-OAuth2::Error ({"message"=>"This authorization code has been used.", "type"=>"OAuthException", "code"=>100, "fbtrace_id"=>"BtMBnfxdyZd"}: 
+
+OAuth2::Error ({"message"=>"This authorization code has been used.", "type"=>"OAuthException", "code"=>100, "fbtrace_id"=>"BtMBnfxdyZd"}:
 {"error":{"message":"This authorization code has been used.","type":"OAuthException","code":100,"fbtrace_id":"BtMBnfxdyZd"}}):
-  
+
 oauth2 (1.2.0) lib/oauth2/client.rb:113:in `request'
 oauth2 (1.2.0) lib/oauth2/client.rb:138:in `get_token'
 oauth2 (1.2.0) lib/oauth2/strategy/auth_code.rb:29:in `get_token'
@@ -1554,9 +1544,9 @@ DEPRECATION WARNING: env is deprecated and will be removed from Rails 5.1 (calle
 Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
-  
+
 app/models/user.rb:11:in `from_omniauth'
 app/controllers/sessions_controller.rb:3:in `create'
   Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
@@ -1576,10 +1566,10 @@ Processing by SessionsController#create as HTML
 Completed 500 Internal Server Error in 41ms (ActiveRecord: 0.0ms)
 
 
-  
+
 NoMethodError (undefined method `find_or_create_from_auth_hash' for #<Class:0x007fd6b391b770>
 Did you mean?  find_or_create_by):
-  
+
 app/controllers/sessions_controller.rb:3:in `create'
   Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
   Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -1591,12 +1581,12 @@ app/controllers/sessions_controller.rb:3:in `create'
   Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (101.2ms)
 Started GET "/auth/facebook/callback?code=AQDBYQdc1jmeEIeZLxQzb4grnPSz5ZCICMUlWN23IGyCKpik_gpIEw0qRxKX8d5nSmpz4EfxIhsnZQh69duS4aYMCJiV2eR6F5pMyriWLDNytMsTWmMK0nN7kDJKY7_gjwFPrumfX8JJD3ECKdW_4WUIwF5PWFAAKcdOCp4oujkPNOhlSM4sAW7HvlbbYS9xme5_YB0NRpAYATPweI5EJDuuxd5zRg4DDBMEvzOWLqXDDdHedbg3Gx8r1TTY0lwNwcwcTZS5EoGyuanioZuKYRRQ7GNoQM1LL1RJYufLDc83Jbg54XUsyuINNjxO0ra0MQ0&state=c2ddbe7ed0bc09e287d48535d053d715b8b73bee1b16183f" for ::1 at 2016-08-03 19:25:53 -0700
 (facebook) Callback phase initiated.
-(facebook) Authentication failure! invalid_credentials: OAuth2::Error, {"message"=>"This authorization code has been used.", "type"=>"OAuthException", "code"=>100, "fbtrace_id"=>"H/XSKStyM0X"}: 
+(facebook) Authentication failure! invalid_credentials: OAuth2::Error, {"message"=>"This authorization code has been used.", "type"=>"OAuthException", "code"=>100, "fbtrace_id"=>"H/XSKStyM0X"}:
 {"error":{"message":"This authorization code has been used.","type":"OAuthException","code":100,"fbtrace_id":"H\/XSKStyM0X"}}
-  
-OAuth2::Error ({"message"=>"This authorization code has been used.", "type"=>"OAuthException", "code"=>100, "fbtrace_id"=>"H/XSKStyM0X"}: 
+
+OAuth2::Error ({"message"=>"This authorization code has been used.", "type"=>"OAuthException", "code"=>100, "fbtrace_id"=>"H/XSKStyM0X"}:
 {"error":{"message":"This authorization code has been used.","type":"OAuthException","code":100,"fbtrace_id":"H\/XSKStyM0X"}}):
-  
+
 oauth2 (1.2.0) lib/oauth2/client.rb:113:in `request'
 oauth2 (1.2.0) lib/oauth2/client.rb:138:in `get_token'
 oauth2 (1.2.0) lib/oauth2/strategy/auth_code.rb:29:in `get_token'
@@ -1667,10 +1657,10 @@ Processing by SessionsController#create as HTML
 Completed 500 Internal Server Error in 41ms (ActiveRecord: 0.0ms)
 
 
-  
+
 NoMethodError (undefined method `find_or_create_from_auth_hash' for #<Class:0x007fd6b0f775b8>
 Did you mean?  find_or_create_by):
-  
+
 app/controllers/sessions_controller.rb:4:in `create'
   Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
   Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -1682,12 +1672,12 @@ app/controllers/sessions_controller.rb:4:in `create'
   Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (95.0ms)
 Started GET "/auth/facebook/callback?code=AQBWn76z_n9gftbuhDKmE-B4c-uXNCgW4i81BB51gjyhMPH-kNNLCFNQpUoMThubnoIOzu3Ksj7ZIAJiy4KM0HrU8unLlUhonaDTxPyB21faCkt78rG9dtdFe4LvKjs74TAiyatjMnZ-XphQz20AgjTiP2NvIP-S5clAs7_9v1wB_aOeiKZ8CnbBYptUtWZjv6PucoWaK3P5PuC0Tjfaa8Sj8iyGAefuZWkfBqIU9F4L68XiAu9CKnw7Jj9zO-CO-w9dwZsgkvUJ_TGItgmLH9ZITyMxHJzIOyJ4PU0p535B_K0oQvRr5zupQkPmLznFEZ4&state=544eb0422e3c9d3bfced0c1d4ff4a648026f0c0d2030950f" for ::1 at 2016-08-03 19:28:27 -0700
 (facebook) Callback phase initiated.
-(facebook) Authentication failure! invalid_credentials: OAuth2::Error, {"message"=>"This authorization code has been used.", "type"=>"OAuthException", "code"=>100, "fbtrace_id"=>"AUXWpQfZrgS"}: 
+(facebook) Authentication failure! invalid_credentials: OAuth2::Error, {"message"=>"This authorization code has been used.", "type"=>"OAuthException", "code"=>100, "fbtrace_id"=>"AUXWpQfZrgS"}:
 {"error":{"message":"This authorization code has been used.","type":"OAuthException","code":100,"fbtrace_id":"AUXWpQfZrgS"}}
-  
-OAuth2::Error ({"message"=>"This authorization code has been used.", "type"=>"OAuthException", "code"=>100, "fbtrace_id"=>"AUXWpQfZrgS"}: 
+
+OAuth2::Error ({"message"=>"This authorization code has been used.", "type"=>"OAuthException", "code"=>100, "fbtrace_id"=>"AUXWpQfZrgS"}:
 {"error":{"message":"This authorization code has been used.","type":"OAuthException","code":100,"fbtrace_id":"AUXWpQfZrgS"}}):
-  
+
 oauth2 (1.2.0) lib/oauth2/client.rb:113:in `request'
 oauth2 (1.2.0) lib/oauth2/client.rb:138:in `get_token'
 oauth2 (1.2.0) lib/oauth2/strategy/auth_code.rb:29:in `get_token'
@@ -1760,10 +1750,10 @@ Processing by SessionsController#create as HTML
 Completed 500 Internal Server Error in 44ms (ActiveRecord: 0.0ms)
 
 
-  
+
 NoMethodError (undefined method `find_or_create_from_auth_hash' for #<Class:0x007fd6b0c1ff00>
 Did you mean?  find_or_create_by):
-  
+
 app/controllers/sessions_controller.rb:4:in `create'
   Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
   Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -1782,10 +1772,10 @@ Processing by SessionsController#create as HTML
 Completed 500 Internal Server Error in 48ms (ActiveRecord: 0.0ms)
 
 
-  
+
 NoMethodError (undefined method `find_or_create_from_auth_hash' for #<Class:0x007fd6b104c858>
 Did you mean?  find_or_create_by):
-  
+
 app/controllers/sessions_controller.rb:4:in `create'
   Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
   Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -1797,12 +1787,12 @@ app/controllers/sessions_controller.rb:4:in `create'
   Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (102.1ms)
 Started GET "/auth/facebook/callback?code=AQBb-zMHXcYfzvFVhLxoyAZrAvqU0Hv2UiowXnqY1e7pPQI2KrRhur637iSimFHYONxwoAtyRQUAZ8nR3Lcii8c8SVtx2cxQVGWxMRjqLAoUShMfW3G_nz4P8GSt-Dzfk_OUxDU8nbj6sx7wT3UUL1Iv93VX72yKya3zvKK-kKBLSwUyyElM2Xt1lrSDMN8WjW4oFlrBH9KM7LL5eNwiaEZRfeDOi27-H4oGj0kNrJGA79xQCwaqMbnmzI3__qEzExduo2w6d9KjAs3iizo1Cy2zLX7_l5yBruQG2ugsjWlTR9rs0p8z2KxabLuZHvBXRJ0&state=b4a28cb629500fa944aa6539bbd3c802a2646d11579d4cdc" for ::1 at 2016-08-03 19:35:01 -0700
 (facebook) Callback phase initiated.
-(facebook) Authentication failure! invalid_credentials: OAuth2::Error, {"message"=>"This authorization code has been used.", "type"=>"OAuthException", "code"=>100, "fbtrace_id"=>"HTu3NbrC6nM"}: 
+(facebook) Authentication failure! invalid_credentials: OAuth2::Error, {"message"=>"This authorization code has been used.", "type"=>"OAuthException", "code"=>100, "fbtrace_id"=>"HTu3NbrC6nM"}:
 {"error":{"message":"This authorization code has been used.","type":"OAuthException","code":100,"fbtrace_id":"HTu3NbrC6nM"}}
-  
-OAuth2::Error ({"message"=>"This authorization code has been used.", "type"=>"OAuthException", "code"=>100, "fbtrace_id"=>"HTu3NbrC6nM"}: 
+
+OAuth2::Error ({"message"=>"This authorization code has been used.", "type"=>"OAuthException", "code"=>100, "fbtrace_id"=>"HTu3NbrC6nM"}:
 {"error":{"message":"This authorization code has been used.","type":"OAuthException","code":100,"fbtrace_id":"HTu3NbrC6nM"}}):
-  
+
 oauth2 (1.2.0) lib/oauth2/client.rb:113:in `request'
 oauth2 (1.2.0) lib/oauth2/client.rb:138:in `get_token'
 oauth2 (1.2.0) lib/oauth2/strategy/auth_code.rb:29:in `get_token'
@@ -1866,12 +1856,12 @@ puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
   Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (101.5ms)
 Started GET "/auth/facebook/callback?code=AQBb-zMHXcYfzvFVhLxoyAZrAvqU0Hv2UiowXnqY1e7pPQI2KrRhur637iSimFHYONxwoAtyRQUAZ8nR3Lcii8c8SVtx2cxQVGWxMRjqLAoUShMfW3G_nz4P8GSt-Dzfk_OUxDU8nbj6sx7wT3UUL1Iv93VX72yKya3zvKK-kKBLSwUyyElM2Xt1lrSDMN8WjW4oFlrBH9KM7LL5eNwiaEZRfeDOi27-H4oGj0kNrJGA79xQCwaqMbnmzI3__qEzExduo2w6d9KjAs3iizo1Cy2zLX7_l5yBruQG2ugsjWlTR9rs0p8z2KxabLuZHvBXRJ0&state=b4a28cb629500fa944aa6539bbd3c802a2646d11579d4cdc" for ::1 at 2016-08-03 19:35:29 -0700
 (facebook) Callback phase initiated.
-(facebook) Authentication failure! invalid_credentials: OAuth2::Error, {"message"=>"This authorization code has expired.", "type"=>"OAuthException", "code"=>100, "fbtrace_id"=>"Em5pWvEpt8t"}: 
+(facebook) Authentication failure! invalid_credentials: OAuth2::Error, {"message"=>"This authorization code has expired.", "type"=>"OAuthException", "code"=>100, "fbtrace_id"=>"Em5pWvEpt8t"}:
 {"error":{"message":"This authorization code has expired.","type":"OAuthException","code":100,"fbtrace_id":"Em5pWvEpt8t"}}
-  
-OAuth2::Error ({"message"=>"This authorization code has expired.", "type"=>"OAuthException", "code"=>100, "fbtrace_id"=>"Em5pWvEpt8t"}: 
+
+OAuth2::Error ({"message"=>"This authorization code has expired.", "type"=>"OAuthException", "code"=>100, "fbtrace_id"=>"Em5pWvEpt8t"}:
 {"error":{"message":"This authorization code has expired.","type":"OAuthException","code":100,"fbtrace_id":"Em5pWvEpt8t"}}):
-  
+
 oauth2 (1.2.0) lib/oauth2/client.rb:113:in `request'
 oauth2 (1.2.0) lib/oauth2/client.rb:138:in `get_token'
 oauth2 (1.2.0) lib/oauth2/strategy/auth_code.rb:29:in `get_token'
@@ -1935,12 +1925,12 @@ puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
   Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (102.4ms)
 Started GET "/auth/facebook/callback?code=AQBb-zMHXcYfzvFVhLxoyAZrAvqU0Hv2UiowXnqY1e7pPQI2KrRhur637iSimFHYONxwoAtyRQUAZ8nR3Lcii8c8SVtx2cxQVGWxMRjqLAoUShMfW3G_nz4P8GSt-Dzfk_OUxDU8nbj6sx7wT3UUL1Iv93VX72yKya3zvKK-kKBLSwUyyElM2Xt1lrSDMN8WjW4oFlrBH9KM7LL5eNwiaEZRfeDOi27-H4oGj0kNrJGA79xQCwaqMbnmzI3__qEzExduo2w6d9KjAs3iizo1Cy2zLX7_l5yBruQG2ugsjWlTR9rs0p8z2KxabLuZHvBXRJ0&state=b4a28cb629500fa944aa6539bbd3c802a2646d11579d4cdc" for ::1 at 2016-08-03 19:35:41 -0700
 (facebook) Callback phase initiated.
-(facebook) Authentication failure! invalid_credentials: OAuth2::Error, {"message"=>"This authorization code has expired.", "type"=>"OAuthException", "code"=>100, "fbtrace_id"=>"DCCJTfZtjXj"}: 
+(facebook) Authentication failure! invalid_credentials: OAuth2::Error, {"message"=>"This authorization code has expired.", "type"=>"OAuthException", "code"=>100, "fbtrace_id"=>"DCCJTfZtjXj"}:
 {"error":{"message":"This authorization code has expired.","type":"OAuthException","code":100,"fbtrace_id":"DCCJTfZtjXj"}}
-  
-OAuth2::Error ({"message"=>"This authorization code has expired.", "type"=>"OAuthException", "code"=>100, "fbtrace_id"=>"DCCJTfZtjXj"}: 
+
+OAuth2::Error ({"message"=>"This authorization code has expired.", "type"=>"OAuthException", "code"=>100, "fbtrace_id"=>"DCCJTfZtjXj"}:
 {"error":{"message":"This authorization code has expired.","type":"OAuthException","code":100,"fbtrace_id":"DCCJTfZtjXj"}}):
-  
+
 oauth2 (1.2.0) lib/oauth2/client.rb:113:in `request'
 oauth2 (1.2.0) lib/oauth2/client.rb:138:in `get_token'
 oauth2 (1.2.0) lib/oauth2/strategy/auth_code.rb:29:in `get_token'
@@ -2011,11 +2001,11 @@ Processing by SessionsController#create as HTML
 Completed 500 Internal Server Error in 36ms (ActiveRecord: 0.0ms)
 
 
-  
+
 NoMethodError (undefined method `P' for #<SessionsController:0x007fd6b3c41350>
 Did you mean?  p
                pp):
-  
+
 app/controllers/sessions_controller.rb:3:in `create'
   Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
   Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -2034,14 +2024,14 @@ Processing by SessionsController#create as HTML
 Completed 406 Not Acceptable in 60ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionController::UnknownFormat (SessionsController#create is missing a template for this request format and variant.
 
 request.formats: ["text/html"]
 request.variant: []
 
 NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not… nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
-  
+
 actionpack (5.0.0) lib/action_controller/metal/implicit_render.rb:56:in `default_render'
 actionpack (5.0.0) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
 actionpack (5.0.0) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
@@ -2143,14 +2133,14 @@ Processing by SessionsController#create as HTML
 Completed 406 Not Acceptable in 65ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionController::UnknownFormat (SessionsController#create is missing a template for this request format and variant.
 
 request.formats: ["text/html"]
 request.variant: []
 
 NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not… nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
-  
+
 actionpack (5.0.0) lib/action_controller/metal/implicit_render.rb:56:in `default_render'
 actionpack (5.0.0) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
 actionpack (5.0.0) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
@@ -2236,12 +2226,12 @@ puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
 Started GET "/auth/facebook/callback?code=AQBVXqndkKw4Bnm0p3CZKgje2HMAG0Er1UG0-CIVdhwAwPAnASna3KXib8EtBxgXPKRGyps_J7KmgjE6mrkmWfYAc0CEtUwjA9FNdxW00wbuKa0Qpbki2gcZl84pbcEZQyErMAVdtuK0w4pMTm5d6-z_M07LeaL9yQ_OrKCWi8i_1uQS42yJ-OtUKRYGii9HMC8yeLI4SHn0BSwaK1aVKKiySjTrY2-O0V4Eb5-6VOdR5iHOqM5DgBz-YZIUTcDzp9ShsgzbD9qDjC1ljm2YtEaMVex5MbDJHK5GJSuzepYdOzRy6wNLhv0o48482mX1Gk4&state=6fcb2936e71f64a2b9f49eadac9462f8eca6cd4eb0e37a44" for ::1 at 2016-08-03 19:36:57 -0700
 (facebook) Callback phase initiated.
   Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
-(facebook) Authentication failure! invalid_credentials: OAuth2::Error, {"message"=>"This authorization code has been used.", "type"=>"OAuthException", "code"=>100, "fbtrace_id"=>"DiEZ4RDrZyF"}: 
+(facebook) Authentication failure! invalid_credentials: OAuth2::Error, {"message"=>"This authorization code has been used.", "type"=>"OAuthException", "code"=>100, "fbtrace_id"=>"DiEZ4RDrZyF"}:
 {"error":{"message":"This authorization code has been used.","type":"OAuthException","code":100,"fbtrace_id":"DiEZ4RDrZyF"}}
-  
-OAuth2::Error ({"message"=>"This authorization code has been used.", "type"=>"OAuthException", "code"=>100, "fbtrace_id"=>"DiEZ4RDrZyF"}: 
+
+OAuth2::Error ({"message"=>"This authorization code has been used.", "type"=>"OAuthException", "code"=>100, "fbtrace_id"=>"DiEZ4RDrZyF"}:
 {"error":{"message":"This authorization code has been used.","type":"OAuthException","code":100,"fbtrace_id":"DiEZ4RDrZyF"}}):
-  
+
 oauth2 (1.2.0) lib/oauth2/client.rb:113:in `request'
   Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
 oauth2 (1.2.0) lib/oauth2/client.rb:138:in `get_token'
@@ -2319,14 +2309,14 @@ Processing by SessionsController#create as HTML
 Completed 406 Not Acceptable in 64ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionController::UnknownFormat (SessionsController#create is missing a template for this request format and variant.
 
 request.formats: ["text/html"]
 request.variant: []
 
 NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not… nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
-  
+
 actionpack (5.0.0) lib/action_controller/metal/implicit_render.rb:56:in `default_render'
 actionpack (5.0.0) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
 actionpack (5.0.0) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
@@ -2419,12 +2409,12 @@ puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
   Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (105.1ms)
 Started GET "/auth/facebook/callback?code=AQApMkIp-Gv1Id8P6FN485zJGU181CYgIrs6xt1KlbvHU2yo6T5_wbngp6e-TKjdVisPncXo0fGIJzHIwrCKa7ihKN-NNd_MYnYk7FRh4LKPswZk4XYxGGseLhyna2Gi1DvzUWBaDR-Sa40oaEgaZSUSDoaUZNMoBjxmwqL08E32TTymhi1ioM6Y2zU6CUciafWYomd313a7WtdmheFVWpwbjyiZrzjPKqAwHGJx8Wb8YzpPjoHBe2z0j3_njRLeapZcjs6f8l_SrhkVdalN8wRyPfM7IRhg_L7JBkcuFLhSD2zrlR6EapSPDEZPYumAB7w&state=308b848a0f661549661758821ddbd3c8868852258f890fbf" for ::1 at 2016-08-03 19:39:57 -0700
 (facebook) Callback phase initiated.
-(facebook) Authentication failure! invalid_credentials: OAuth2::Error, {"message"=>"This authorization code has been used.", "type"=>"OAuthException", "code"=>100, "fbtrace_id"=>"Ez5R7nwzo7X"}: 
+(facebook) Authentication failure! invalid_credentials: OAuth2::Error, {"message"=>"This authorization code has been used.", "type"=>"OAuthException", "code"=>100, "fbtrace_id"=>"Ez5R7nwzo7X"}:
 {"error":{"message":"This authorization code has been used.","type":"OAuthException","code":100,"fbtrace_id":"Ez5R7nwzo7X"}}
-  
-OAuth2::Error ({"message"=>"This authorization code has been used.", "type"=>"OAuthException", "code"=>100, "fbtrace_id"=>"Ez5R7nwzo7X"}: 
+
+OAuth2::Error ({"message"=>"This authorization code has been used.", "type"=>"OAuthException", "code"=>100, "fbtrace_id"=>"Ez5R7nwzo7X"}:
 {"error":{"message":"This authorization code has been used.","type":"OAuthException","code":100,"fbtrace_id":"Ez5R7nwzo7X"}}):
-  
+
 oauth2 (1.2.0) lib/oauth2/client.rb:113:in `request'
 oauth2 (1.2.0) lib/oauth2/client.rb:138:in `get_token'
 oauth2 (1.2.0) lib/oauth2/strategy/auth_code.rb:29:in `get_token'
@@ -2495,14 +2485,14 @@ Processing by SessionsController#create as HTML
 Completed 406 Not Acceptable in 63ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionController::UnknownFormat (SessionsController#create is missing a template for this request format and variant.
 
 request.formats: ["text/html"]
 request.variant: []
 
 NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not… nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
-  
+
 actionpack (5.0.0) lib/action_controller/metal/implicit_render.rb:56:in `default_render'
 actionpack (5.0.0) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
 actionpack (5.0.0) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
@@ -2602,14 +2592,14 @@ Processing by SessionsController#create as HTML
 Completed 406 Not Acceptable in 59ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionController::UnknownFormat (SessionsController#create is missing a template for this request format and variant.
 
 request.formats: ["text/html"]
 request.variant: []
 
 NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not… nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
-  
+
 actionpack (5.0.0) lib/action_controller/metal/implicit_render.rb:56:in `default_render'
 actionpack (5.0.0) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
 actionpack (5.0.0) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
@@ -2711,14 +2701,14 @@ Processing by SessionsController#create as HTML
 Completed 406 Not Acceptable in 58ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionController::UnknownFormat (SessionsController#create is missing a template for this request format and variant.
 
 request.formats: ["text/html"]
 request.variant: []
 
 NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not… nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
-  
+
 actionpack (5.0.0) lib/action_controller/metal/implicit_render.rb:56:in `default_render'
 actionpack (5.0.0) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
 actionpack (5.0.0) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
@@ -3178,7 +3168,6 @@ Migrating to CreateUsers (20160803224253)
 Migrating to CreateMenus (20160803224329)
   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
   [1m[35m (4.2ms)[0m  [1m[35mCREATE TABLE "menus" ("id" serial primary key, "user_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_c38eb0f938"
->>>>>>> 967769a04dbfff59a8412c51caaf7fee1924cb8d
 FOREIGN KEY ("user_id")
   REFERENCES "users" ("id")
 )[0m
@@ -3186,7 +3175,6 @@ FOREIGN KEY ("user_id")
   [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20160803224329"]]
   [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
 Migrating to CreateMenuRecipes (20160803224425)
-<<<<<<< HEAD
   [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
   [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "menus_recipes" ("menu_id" integer NOT NULL, "recipe_id" integer NOT NULL)[0m
   [1m[35m (1.0ms)[0m  [1m[35mCREATE  INDEX  "index_menus_recipes_on_menu_id" ON "menus_recipes"  ("menu_id")[0m
@@ -3216,7 +3204,6 @@ FOREIGN KEY ("user_id")
   [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(3841712907833509065)[0m
   [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
   [1m[35m (2.4ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
-=======
   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
   [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "menus_recipes" ("menu_id" integer NOT NULL, "recipe_id" integer NOT NULL)[0m
   [1m[35m (0.9ms)[0m  [1m[35mCREATE  INDEX  "index_menus_recipes_on_menu_id" ON "menus_recipes"  ("menu_id")[0m
@@ -3258,11 +3245,8 @@ WHERE c.contype = 'f'
   AND t3.nspname = ANY (current_schemas(false))
 ORDER BY c.conname
 [0m
-<<<<<<< HEAD
   [1m[35m (1.9ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
-=======
   [1m[35m (2.6ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
->>>>>>> 967769a04dbfff59a8412c51caaf7fee1924cb8d
 FROM pg_constraint c
 JOIN pg_class t1 ON c.conrelid = t1.oid
 JOIN pg_class t2 ON c.confrelid = t2.oid
@@ -3274,11 +3258,8 @@ WHERE c.contype = 'f'
   AND t3.nspname = ANY (current_schemas(false))
 ORDER BY c.conname
 [0m
-<<<<<<< HEAD
   [1m[35m (1.9ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
-=======
   [1m[35m (2.2ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
->>>>>>> 967769a04dbfff59a8412c51caaf7fee1924cb8d
 FROM pg_constraint c
 JOIN pg_class t1 ON c.conrelid = t1.oid
 JOIN pg_class t2 ON c.confrelid = t2.oid
@@ -3290,11 +3271,8 @@ WHERE c.contype = 'f'
   AND t3.nspname = ANY (current_schemas(false))
 ORDER BY c.conname
 [0m
-<<<<<<< HEAD
   [1m[35m (1.8ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
-=======
   [1m[35m (2.3ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
->>>>>>> 967769a04dbfff59a8412c51caaf7fee1924cb8d
 FROM pg_constraint c
 JOIN pg_class t1 ON c.conrelid = t1.oid
 JOIN pg_class t2 ON c.confrelid = t2.oid
@@ -3306,11 +3284,8 @@ WHERE c.contype = 'f'
   AND t3.nspname = ANY (current_schemas(false))
 ORDER BY c.conname
 [0m
-<<<<<<< HEAD
   [1m[35m (1.8ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
-=======
   [1m[35m (2.0ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
->>>>>>> 967769a04dbfff59a8412c51caaf7fee1924cb8d
 FROM pg_constraint c
 JOIN pg_class t1 ON c.conrelid = t1.oid
 JOIN pg_class t2 ON c.confrelid = t2.oid
@@ -3322,7 +3297,6 @@ WHERE c.contype = 'f'
   AND t3.nspname = ANY (current_schemas(false))
 ORDER BY c.conname
 [0m
-<<<<<<< HEAD
 Started GET "/" for ::1 at 2016-08-03 19:58:36 -0700
   [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
 Processing by SessionsController#login as HTML
@@ -3389,9 +3363,9 @@ Processing by SessionsController#create as HTML
 Completed 500 Internal Server Error in 86ms (ActiveRecord: 5.1ms)
 
 
-  
+
 NoMethodError (undefined method `login' for #<SessionsController:0x007fab98393730>):
-  
+
 app/controllers/sessions_controller.rb:10:in `create'
   Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
   Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -3410,9 +3384,9 @@ Processing by SessionsController#create as HTML
 Completed 500 Internal Server Error in 53ms (ActiveRecord: 1.0ms)
 
 
-  
+
 NoMethodError (undefined method `login' for #<SessionsController:0x007fab9bd452f8>):
-  
+
 app/controllers/sessions_controller.rb:10:in `create'
   Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
   Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -3439,9 +3413,9 @@ Processing by SessionsController#create as HTML
 Completed 500 Internal Server Error in 44ms (ActiveRecord: 1.1ms)
 
 
-  
+
 NoMethodError (undefined method `login' for #<SessionsController:0x007fab98d70a28>):
-  
+
 app/controllers/sessions_controller.rb:10:in `create'
   Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
   Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -3452,10 +3426,10 @@ app/controllers/sessions_controller.rb:10:in `create'
   Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
   Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (134.0ms)
 Started GET "/auth/facebook/callback?code=AQCJumA0T89TXcpy8c7upL-Yb9P4LpTeGqAWBcBbMdqtakAh6-7RrKFLBNd4UKYmBHvsYVovoUfRgZFxacQXJVTm1URpNE3yoEp7B4tFbueWWHEw_LC1KmlPbOAnsAjxw4x_aSbFq3rNtylWVLBFNG2Kk65h9KQRPtvApenkAB0f5fq2H3Cfm_iivjZ1sLL8mrju188bnDLIMNmvaF3jtI38XssaJQzUxo7WWCvb_kEw8hr26rKCxUTDiCTNM3qq8hMJ9yzeK6Wxo--IrjxDteeU7Tlg2zayGj5LqyDagZOJkzzyi0vHEADpMyLwuX47UuY&state=d1d72bff19cc4166a1c03beef80ef4e1a77cd03c0c4ba167" for ::1 at 2016-08-03 20:05:41 -0700
-  
-OAuth2::Error ({"message"=>"This authorization code has been used.", "type"=>"OAuthException", "code"=>100, "fbtrace_id"=>"CYhpXF9migr"}: 
+
+OAuth2::Error ({"message"=>"This authorization code has been used.", "type"=>"OAuthException", "code"=>100, "fbtrace_id"=>"CYhpXF9migr"}:
 {"error":{"message":"This authorization code has been used.","type":"OAuthException","code":100,"fbtrace_id":"CYhpXF9migr"}}):
-  
+
 oauth2 (1.2.0) lib/oauth2/client.rb:113:in `request'
 oauth2 (1.2.0) lib/oauth2/client.rb:138:in `get_token'
 oauth2 (1.2.0) lib/oauth2/strategy/auth_code.rb:29:in `get_token'
@@ -3524,11 +3498,11 @@ Processing by SessionsController#login as HTML
 Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
 
 
-  
+
 SyntaxError (/Users/apprentice/Desktop/chowsource/app/views/sessions/login.html.erb:4: syntax error, unexpected tSTRING_DEND, expecting ']'
 ...append=( User.find(session[:id}).name );@output_buffer.safe_...
 ...                               ^):
-  
+
 app/views/sessions/login.html.erb:4: syntax error, unexpected tSTRING_DEND, expecting ']'
   Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
   Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -16027,5 +16001,417 @@ ORDER BY c.conname
   [1m[36mLove Load (0.7ms)[0m  [1m[34mSELECT "loves".* FROM "loves"[0m
   [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
   [1m[36mMenuRecipe Load (0.5ms)[0m  [1m[34mSELECT "menu_recipes".* FROM "menu_recipes"[0m
->>>>>>> 967769a04dbfff59a8412c51caaf7fee1924cb8d
+Started GET "/" for ::1 at 2016-08-04 10:29:09 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.erb within layouts/application
+  Rendered sessions/login.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 276ms (Views: 273.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook" for ::1 at 2016-08-04 10:29:11 -0700
+Started GET "/" for ::1 at 2016-08-04 10:31:50 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.erb within layouts/application
+  Rendered sessions/login.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 276ms (Views: 274.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook" for ::1 at 2016-08-04 10:32:02 -0700
+Started GET "/auth/facebook/callback?code=AQA9ntXTQr4WRqWTfZA0TYe5n7Nx3C0uNcT2_3yDeFyvHG4sB6wyhQ_RjRjlSua1BgKHw1RTIjBGvFUEj0G2lpVuB13jj5ulYVl7vJdS-ywgd0sXKhEmUMN4kpAN1ZjzZw-eBAkT7--Rdxqp1Gf9lPbiwl11aZ5pzPZ8AkrBZ-GqUH8FlGsMOGpx8W5WljQCU3bTQgS7ib2P79QKpUjO6a0wIs6sph1Kmm8_d_q6WeKo1SVlQiZNljJJUgaRxmf2fI_Byy14Zjn8oRZC8QDqQAgkkTqGAf1D3_skYvUvXnWfOhqD-TSI7DZIW_GH_zI2Yb8&state=f538e8519f720c3e9075f2856b2fde40710c3faadac401e4" for ::1 at 2016-08-04 10:32:02 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQA9ntXTQr4WRqWTfZA0TYe5n7Nx3C0uNcT2_3yDeFyvHG4sB6wyhQ_RjRjlSua1BgKHw1RTIjBGvFUEj0G2lpVuB13jj5ulYVl7vJdS-ywgd0sXKhEmUMN4kpAN1ZjzZw-eBAkT7--Rdxqp1Gf9lPbiwl11aZ5pzPZ8AkrBZ-GqUH8FlGsMOGpx8W5WljQCU3bTQgS7ib2P79QKpUjO6a0wIs6sph1Kmm8_d_q6WeKo1SVlQiZNljJJUgaRxmf2fI_Byy14Zjn8oRZC8QDqQAgkkTqGAf1D3_skYvUvXnWfOhqD-TSI7DZIW_GH_zI2Yb8", "state"=>"f538e8519f720c3e9075f2856b2fde40710c3faadac401e4", "provider"=>"facebook"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "users" ("token", "name", "pic", "uid", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["token", "EAADr8tEA54QBAAtson2tGcubOG1i6RZCIfMYx7CRkRhGtD8p1lF6dbBanc5gZA8F1E3IOtABbxdZCsB4xEQiZC8yO4OZBV6P2iAkpu3QlrJE91FMpZBeeBrRzjNz0VMkeEfu5c2xUUeEPs11feF7I3OhAmFgvzWcEZD"], ["name", "Will Friebel"], ["pic", "http://graph.facebook.com/v2.6/796819854942/picture"], ["uid", "796819854942"], ["email", "will.friebel@gmail.com"], ["created_at", 2016-08-04 17:32:03 UTC], ["updated_at", 2016-08-04 17:32:03 UTC]]
+  [1m[35m (27.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 61ms (ActiveRecord: 32.3ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 10:32:03 -0700
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered sessions/login.html.erb within layouts/application (23.9ms)
+Completed 200 OK in 55ms (Views: 52.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 10:33:46 -0700
+Processing by SessionsController#login as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+
+ArgumentError (wrong number of arguments (given 0, expected 1)):
+
+app/helpers/sessions_helper.rb:2:in `login'
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.7ms)
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (99.2ms)
+Started GET "/" for ::1 at 2016-08-04 10:36:10 -0700
+Processing by SessionsController#login as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+
+ArgumentError (wrong number of arguments (given 0, expected 1)):
+
+app/helpers/sessions_helper.rb:2:in `login'
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.7ms)
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (104.2ms)
+Started GET "/" for ::1 at 2016-08-04 10:37:50 -0700
+Processing by SessionsController#login as HTML
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms)
+
+
+
+ArgumentError (wrong number of arguments (given 0, expected 1)):
+
+app/helpers/sessions_helper.rb:2:in `login'
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.6ms)
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (101.1ms)
+Started GET "/" for ::1 at 2016-08-04 10:38:01 -0700
+Processing by SessionsController#login as HTML
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms)
+
+
+
+ArgumentError (wrong number of arguments (given 0, expected 1)):
+
+app/helpers/sessions_helper.rb:2:in `login'
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.4ms)
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (103.3ms)
+Started GET "/" for ::1 at 2016-08-04 10:38:34 -0700
+Processing by SessionsController#login as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+
+ArgumentError (wrong number of arguments (given 0, expected 1)):
+
+app/helpers/sessions_helper.rb:2:in `login'
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.7ms)
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (102.3ms)
+Started GET "/" for ::1 at 2016-08-04 10:38:46 -0700
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.erb within layouts/application
+  Rendered sessions/login.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 22ms (Views: 20.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook" for ::1 at 2016-08-04 10:38:49 -0700
+Started GET "/auth/facebook" for ::1 at 2016-08-04 10:39:24 -0700
+Started GET "/" for ::1 at 2016-08-04 10:39:28 -0700
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.erb within layouts/application
+  Rendered sessions/login.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 24ms (Views: 21.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook" for ::1 at 2016-08-04 10:39:30 -0700
+Started GET "/auth/facebook/callback?code=AQAXSIbvxdjXgRUzr7mKVelwhaKKE8JGYRJLmqBX7vGTtkVLDDAvLCjr5Un7cL_jrMK5cgGXsxV8UMHyGCTrz6ehxZU1Hu8ufvycq6Y6Ftuo82r1vmXNVPJSl8-u-ZhVr4yaac2yMThoZZIRR21tPrjRLVzzmNYhzOOoS3pddVPqG4d6Rpr24mkkQBd7l1JPI5zOboZFp-IS7n-8kW6n8-Qn0PvqswXQ-bcyxctzD8f3L8zUISqE-UQmsO9Lo6bi6sii_SPckDAJCDaZQXFMq5qsPv8W03nZ_au6gLA6bjAqcVnDR2sfFD_cdtfYK7mchG8&state=55a62ae34d5a8881144751dd62b1e9e93f379f8bed7361b5" for ::1 at 2016-08-04 10:39:38 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQAXSIbvxdjXgRUzr7mKVelwhaKKE8JGYRJLmqBX7vGTtkVLDDAvLCjr5Un7cL_jrMK5cgGXsxV8UMHyGCTrz6ehxZU1Hu8ufvycq6Y6Ftuo82r1vmXNVPJSl8-u-ZhVr4yaac2yMThoZZIRR21tPrjRLVzzmNYhzOOoS3pddVPqG4d6Rpr24mkkQBd7l1JPI5zOboZFp-IS7n-8kW6n8-Qn0PvqswXQ-bcyxctzD8f3L8zUISqE-UQmsO9Lo6bi6sii_SPckDAJCDaZQXFMq5qsPv8W03nZ_au6gLA6bjAqcVnDR2sfFD_cdtfYK7mchG8", "state"=>"55a62ae34d5a8881144751dd62b1e9e93f379f8bed7361b5", "provider"=>"facebook"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "users" ("token", "name", "pic", "uid", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["token", "EAADr8tEA54QBAEicvrJMjEI37w0JhPOXnnY7ywdGuLBHRgo9swnfmbXfZCuzuSTeiKcxa3JwEtNSNwxIxg9LKT77DHvmPmrBq6wZCFgJbNfvib2q3g16AB3gPzTdGL4PJEbf9wqXk84ZARsR0J93ZB5bEQsIWDEZD"], ["name", "Will Friebel"], ["pic", "http://graph.facebook.com/v2.6/796819854942/picture"], ["uid", "796819854942"], ["email", "will.friebel@gmail.com"], ["created_at", 2016-08-04 17:39:38 UTC], ["updated_at", 2016-08-04 17:39:38 UTC]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 26ms (ActiveRecord: 6.9ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 10:39:38 -0700
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.erb within layouts/application
+  Rendered sessions/login.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 22ms (Views: 20.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 10:40:03 -0700
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.erb within layouts/application
+  Rendered sessions/login.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 25ms (Views: 23.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 10:40:10 -0700
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.erb within layouts/application
+  Rendered sessions/login.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 24ms (Views: 21.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook" for ::1 at 2016-08-04 10:40:11 -0700
+Started GET "/auth/facebook/callback?code=AQBRPIMko7IL9tsmDk-VsLHdJNaCLs57Dsi2P90jM_6IOf0LVmXLa6uag9yCp44w-fGX3liTsrdTbGZ51vxmZ-DpOgWT90FNRq6xijefOyUxNtAVBOzvJNmq3BFIoz6Zjd6f2aYP7EuXNquB94qWnFGrYhxDJhnxgqJHeDguEaK9AdAct_LDqmysc0yFHudHjMwHJrEr-mJol7K91t6ar-NSKr9PsP_wTbZeZpxVoOuBRgpvrskNCy0xD5CYXljHfc7YNxNVxzs-nqZCCEMan8jop65p_CRS9aW1Xe_-Id2u6-P016O4FxGKx_jo0FiimbI&state=ddb55307b435bfa57c04d5c55b8c357e5e9b55866780508a" for ::1 at 2016-08-04 10:40:11 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQBRPIMko7IL9tsmDk-VsLHdJNaCLs57Dsi2P90jM_6IOf0LVmXLa6uag9yCp44w-fGX3liTsrdTbGZ51vxmZ-DpOgWT90FNRq6xijefOyUxNtAVBOzvJNmq3BFIoz6Zjd6f2aYP7EuXNquB94qWnFGrYhxDJhnxgqJHeDguEaK9AdAct_LDqmysc0yFHudHjMwHJrEr-mJol7K91t6ar-NSKr9PsP_wTbZeZpxVoOuBRgpvrskNCy0xD5CYXljHfc7YNxNVxzs-nqZCCEMan8jop65p_CRS9aW1Xe_-Id2u6-P016O4FxGKx_jo0FiimbI", "state"=>"ddb55307b435bfa57c04d5c55b8c357e5e9b55866780508a", "provider"=>"facebook"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "users" ("token", "name", "pic", "uid", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["token", "EAADr8tEA54QBAE88LQFOzEHr1ZBFWtwqxctFNDbdOAaQN9LHTXSM22V9HLd0yGZBINTPAARrrkPVQ7QxF73w20UIx1E7Ux4EZBHfgkZCKZAW3jGPGexCDQcCRnZA21MnkJOsIdTXmfhOBvyuYn5x6fqC4CLZCc1wOkZD"], ["name", "Will Friebel"], ["pic", "http://graph.facebook.com/v2.6/796819854942/picture"], ["uid", "796819854942"], ["email", "will.friebel@gmail.com"], ["created_at", 2016-08-04 17:40:12 UTC], ["updated_at", 2016-08-04 17:40:12 UTC]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 10:40:12 -0700
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendered sessions/login.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 24ms (Views: 21.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 10:44:37 -0700
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendered sessions/login.html.erb within layouts/application (17.4ms)
+Completed 200 OK in 37ms (Views: 32.1ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 10:44:43 -0700
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendered sessions/login.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 33ms (Views: 30.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 10:44:45 -0700
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendered sessions/login.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 26ms (Views: 23.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 10:45:03 -0700
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.erb within layouts/application
+  Rendered sessions/login.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 23ms (Views: 21.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook" for ::1 at 2016-08-04 10:45:10 -0700
+Started GET "/auth/facebook/callback?code=AQBOgZ8o_zk2OManm0yvPe9eQPZNI9eCfUt-1ZZi81NP6YHInWgdiQ-sPJFZZvlzkYR0ZZfpWOF3uQXs4hxj1_bEbfqETX_RQRn-E6ZSJQpEQO5GxwSmilg4chzF2NpXn0wQDbcjsGaCsOOzTOO-4ntuvXEZ01XFNduw8ywOG9OT8L3SYFw4z3XtfS077kAxHtKdze044-iT1KVZV8doBC71y6EOau6v7snW7EWrtWeoiewn3nQO-CMr2QEFftaIzU8wpw6CSpzhC9bgC-Xbqqa_BHitYTeourrnDEX1SeKL-kPo8E1LWJ9EX-GMrfjBkrY&state=26c73b512f41251323f0df48449c42b65eea5cfe2e1a5851" for ::1 at 2016-08-04 10:45:19 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQBOgZ8o_zk2OManm0yvPe9eQPZNI9eCfUt-1ZZi81NP6YHInWgdiQ-sPJFZZvlzkYR0ZZfpWOF3uQXs4hxj1_bEbfqETX_RQRn-E6ZSJQpEQO5GxwSmilg4chzF2NpXn0wQDbcjsGaCsOOzTOO-4ntuvXEZ01XFNduw8ywOG9OT8L3SYFw4z3XtfS077kAxHtKdze044-iT1KVZV8doBC71y6EOau6v7snW7EWrtWeoiewn3nQO-CMr2QEFftaIzU8wpw6CSpzhC9bgC-Xbqqa_BHitYTeourrnDEX1SeKL-kPo8E1LWJ9EX-GMrfjBkrY", "state"=>"26c73b512f41251323f0df48449c42b65eea5cfe2e1a5851", "provider"=>"facebook"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "users" ("token", "name", "pic", "uid", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["token", "EAADr8tEA54QBALb69Wu5FZC4ndc6TmUyAKeNmqIXZATsk5IY23w6063JvaClljdqLr6b3pfZB4pkgnL8G0d9PYtkpLj4wZA2DnG3nSUOQfP65UGRlkAAT7MHbsJoZC0vIWZABmKObZBSTQTCstDPwHOSkLZBGZC32vnYZD"], ["name", "Will Friebel"], ["pic", "http://graph.facebook.com/v2.6/796819854942/picture"], ["uid", "796819854942"], ["email", "will.friebel@gmail.com"], ["created_at", 2016-08-04 17:45:19 UTC], ["updated_at", 2016-08-04 17:45:19 UTC]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 10:45:19 -0700
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  Rendered sessions/login.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 27ms (Views: 24.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 10:45:23 -0700
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  Rendered sessions/login.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 29ms (Views: 26.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/auth/facebook" for ::1 at 2016-08-04 10:45:30 -0700
+Started GET "/auth/facebook/callback?code=AQASiKNWUcrjwV6pF-taU1yjpfS2cbRlyGito0uxeNaaU-OxIYABWX7gGVG_PffGMX_SsFESKKrAkeEam9hxnEkF_AktKwuEPRfHABtPN9X4KoXEVAxWDJahrycKfI1wP_yu61YJTTUEgISSZA8GDkvlbWSlAyPgbWSD9TvJFtHrUvPL-2CTJss1WnUqEIr8OjXkUzNoUlwV-VZW97CttOdqLU-S8RrtcL-7dGJSm0lACmcBmTL6i_Za3fOahHm1A06MfvI8dm-88dyXw7bwEh_rZz3m-sRx2ydry2caF6Ounc8d5kSuQI6f6UZEkHVJ8QM&state=0dcd9da1e43f2443f72be35ce90d0524dc1d0bde35b42c90" for ::1 at 2016-08-04 10:45:30 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQASiKNWUcrjwV6pF-taU1yjpfS2cbRlyGito0uxeNaaU-OxIYABWX7gGVG_PffGMX_SsFESKKrAkeEam9hxnEkF_AktKwuEPRfHABtPN9X4KoXEVAxWDJahrycKfI1wP_yu61YJTTUEgISSZA8GDkvlbWSlAyPgbWSD9TvJFtHrUvPL-2CTJss1WnUqEIr8OjXkUzNoUlwV-VZW97CttOdqLU-S8RrtcL-7dGJSm0lACmcBmTL6i_Za3fOahHm1A06MfvI8dm-88dyXw7bwEh_rZz3m-sRx2ydry2caF6Ounc8d5kSuQI6f6UZEkHVJ8QM", "state"=>"0dcd9da1e43f2443f72be35ce90d0524dc1d0bde35b42c90", "provider"=>"facebook"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "users" ("token", "name", "pic", "uid", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["token", "EAADr8tEA54QBAO5jZB3lFnLVPbeXqTZB9MjQ1JYfpEYHZBi1QZANGUBdzRYOQaCaiJUS1t7ZAI2b26tzOOdPf7HgoCscPqZA9Vw797TQPphyG67HPvz5dqTaSIokacVTg1dAGCMZBS6BTLLHmXjTx465fpCqZAlQ6ZA0ZD"], ["name", "Will Friebel"], ["pic", "http://graph.facebook.com/v2.6/796819854942/picture"], ["uid", "796819854942"], ["email", "will.friebel@gmail.com"], ["created_at", 2016-08-04 17:45:30 UTC], ["updated_at", 2016-08-04 17:45:30 UTC]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 10:45:31 -0700
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  Rendered sessions/login.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 26ms (Views: 23.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 10:46:23 -0700
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  Rendered sessions/login.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 45ms (Views: 41.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/auth/facebook" for ::1 at 2016-08-04 10:46:25 -0700
+Started GET "/auth/facebook/callback?code=AQATDuEfoahJ3p9GHd2CN4QQzc9zavX79lcqU39jHNzhhGQQoVzYYmFtotkhtbwO7GtRytVB-fVLjug8lF8wFekRfnfEKjNANTi0nQ-FFPxEbJ3zxosPzjBYEyy9mEOsy5M1tl9QagVYQ0hsWXFeKUUH8Ze4FQcjrbv9NV_YWhPkWh9belIk5O9Or9zODwfz6__-DlxzJJUurdGmcGJLKbrMn1lWlODIhbuEy1ROZc0zw1DsTdsm9nLsOB8plbkZSrq7uwQjdp8EcMqRSD3kRBF2Id0jTzekWBCeJFacS7MlpJ6YEapngcJkeYTcGg_BYsc&state=2ca47692d4178b2e222951ee5d5bea428b1e22cfcb28c81b" for ::1 at 2016-08-04 10:46:33 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQATDuEfoahJ3p9GHd2CN4QQzc9zavX79lcqU39jHNzhhGQQoVzYYmFtotkhtbwO7GtRytVB-fVLjug8lF8wFekRfnfEKjNANTi0nQ-FFPxEbJ3zxosPzjBYEyy9mEOsy5M1tl9QagVYQ0hsWXFeKUUH8Ze4FQcjrbv9NV_YWhPkWh9belIk5O9Or9zODwfz6__-DlxzJJUurdGmcGJLKbrMn1lWlODIhbuEy1ROZc0zw1DsTdsm9nLsOB8plbkZSrq7uwQjdp8EcMqRSD3kRBF2Id0jTzekWBCeJFacS7MlpJ6YEapngcJkeYTcGg_BYsc", "state"=>"2ca47692d4178b2e222951ee5d5bea428b1e22cfcb28c81b", "provider"=>"facebook"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("token", "name", "pic", "uid", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["token", "EAADr8tEA54QBABfL9tJrX4z98i5QMSUaocOIP1iZBDbEtwzzk1Ayd5AofbyNcmzcdAZCE3f0cCm1R9NnEZC3ZBbTPNZBBJQ8nVVCbhZAzhwVxYSL9xHEFUvD6X6hZChci9L8cIyE2K38JEj5XPWHnuM3QZAAQ0psBIYZD"], ["name", "Will Friebel"], ["pic", "http://graph.facebook.com/v2.6/796819854942/picture"], ["uid", "796819854942"], ["email", "will.friebel@gmail.com"], ["created_at", 2016-08-04 17:46:34 UTC], ["updated_at", 2016-08-04 17:46:34 UTC]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 10:46:34 -0700
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  Rendered sessions/login.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 23ms (Views: 20.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 10:46:38 -0700
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  Rendered sessions/login.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 23ms (Views: 21.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 10:47:12 -0700
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  Rendered sessions/login.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 25ms (Views: 22.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/sessions/logout" for ::1 at 2016-08-04 10:47:16 -0700
+Processing by SessionsController#delete as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 10:47:16 -0700
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.erb within layouts/application
+  Rendered sessions/login.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 25ms (Views: 23.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook" for ::1 at 2016-08-04 10:47:27 -0700
+Started GET "/auth/facebook/callback?code=AQCog71OkPAA_SSpmuw_7VWnGBJVX5YoemhKMt0nc9MFwqAE1f_Lg6clMJQ6TRKENE2mRHGFixC199cb5ruavwJTlUQonFVYHimLnyzC8wT8sZOvwZmG8xUePSEAJW8rIhAAKv9eFtYt3fKddXTO8neKnOSAgSBDgsm3lC4GkeacCs9aFRh6pEJYWxBD9h4zTfB2X2svEJzjrPF6CURFVeC_ST5p8peoTpFke1DNxLutNmNGjoblxEt3qBSoTPWpoK48CFsHF6SBBpwf0wzlCFSWKbwXN2qDgwoNDXEfftTtuEUZUxTzVFTe9hlrPU1TeZQ&state=f5e786c10e4fd4227fce3d65e98dd3937cfa5bfb11d910f4" for ::1 at 2016-08-04 10:47:27 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQCog71OkPAA_SSpmuw_7VWnGBJVX5YoemhKMt0nc9MFwqAE1f_Lg6clMJQ6TRKENE2mRHGFixC199cb5ruavwJTlUQonFVYHimLnyzC8wT8sZOvwZmG8xUePSEAJW8rIhAAKv9eFtYt3fKddXTO8neKnOSAgSBDgsm3lC4GkeacCs9aFRh6pEJYWxBD9h4zTfB2X2svEJzjrPF6CURFVeC_ST5p8peoTpFke1DNxLutNmNGjoblxEt3qBSoTPWpoK48CFsHF6SBBpwf0wzlCFSWKbwXN2qDgwoNDXEfftTtuEUZUxTzVFTe9hlrPU1TeZQ", "state"=>"f5e786c10e4fd4227fce3d65e98dd3937cfa5bfb11d910f4", "provider"=>"facebook"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("token", "name", "pic", "uid", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["token", "EAADr8tEA54QBALNZAr2jaFg1Ax7iEfGUvyARB23LB5w7AqRhDtg5JybVsvZCvZAyM1BCx8n41XmLMRZAoZCdZArDiDYZBsTP5ANUHZBWZAGSINQvII29vbeachtelBDMpjz8RZBHQZCXfACqVS2Gcd6CMbuZClUpHt53bJYZD"], ["name", "Will Friebel"], ["pic", "http://graph.facebook.com/v2.6/796819854942/picture"], ["uid", "796819854942"], ["email", "will.friebel@gmail.com"], ["created_at", 2016-08-04 17:47:27 UTC], ["updated_at", 2016-08-04 17:47:27 UTC]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 10:47:27 -0700
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  Rendered sessions/login.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 22ms (Views: 19.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/sessions/logout" for ::1 at 2016-08-04 10:47:30 -0700
+Processing by SessionsController#delete as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 10:47:30 -0700
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.erb within layouts/application
+  Rendered sessions/login.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 21ms (Views: 18.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 10:47:42 -0700
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.erb within layouts/application
+  Rendered sessions/login.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 18ms (Views: 16.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook" for ::1 at 2016-08-04 10:47:43 -0700
+Started GET "/auth/facebook/callback?code=AQAPGAeOY8_v8ISOE2VPQCwA0EZNidcrdAsmfXs0VfWxUyDvlRx95eDyFEM1oB-SAgI4XgnKQRwxRvGhhpLIsTxoT4InD2yhax-biP1iAzf7JuscDrgdnDahprBnolSazG6WDBneFmT_VaJdq7EK8FFeuTwEmMI9-vsmjAX-j4MjkFtKrGr1IYNmarAy5eDlpa16gpV4QyojiFZVshXuJqQpElCmJUIT8xjziZJjhfSZudXhDz2S-uPIebCw3qx4gbiilqkvLhIyv5eCooAjWbZTco3fEmkRYyokiM6c5bvjUniMpCN8V1f7hMOXFsa8DvY&state=4e2575a1268bf60c1caa0107bd7d52c9ad9bbd22be2d6c04" for ::1 at 2016-08-04 10:47:51 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQAPGAeOY8_v8ISOE2VPQCwA0EZNidcrdAsmfXs0VfWxUyDvlRx95eDyFEM1oB-SAgI4XgnKQRwxRvGhhpLIsTxoT4InD2yhax-biP1iAzf7JuscDrgdnDahprBnolSazG6WDBneFmT_VaJdq7EK8FFeuTwEmMI9-vsmjAX-j4MjkFtKrGr1IYNmarAy5eDlpa16gpV4QyojiFZVshXuJqQpElCmJUIT8xjziZJjhfSZudXhDz2S-uPIebCw3qx4gbiilqkvLhIyv5eCooAjWbZTco3fEmkRYyokiM6c5bvjUniMpCN8V1f7hMOXFsa8DvY", "state"=>"4e2575a1268bf60c1caa0107bd7d52c9ad9bbd22be2d6c04", "provider"=>"facebook"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("token", "name", "pic", "uid", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["token", "EAADr8tEA54QBAOKDCJMnaYrGiNbPZAEqPoxdiDlbWAKIA8yN621iuDUClK50JB1rHZAM1GpkSiyJ94qrMoF8JoORLC7nZCJMuBAbBQZB2iPbszEvmngEnjdlXMSEJJ7VnRNZAplNeHx1ZBiEwcbkCa9sM1dFgAt5wZD"], ["name", "Will Friebel"], ["pic", "http://graph.facebook.com/v2.6/796819854942/picture"], ["uid", "796819854942"], ["email", "will.friebel@gmail.com"], ["created_at", 2016-08-04 17:47:51 UTC], ["updated_at", 2016-08-04 17:47:51 UTC]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 10:47:51 -0700
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  Rendered sessions/login.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 25ms (Views: 22.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sessions/logout" for ::1 at 2016-08-04 10:47:52 -0700
+Processing by SessionsController#delete as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 10:47:52 -0700
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.erb within layouts/application
+  Rendered sessions/login.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 21ms (Views: 19.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook" for ::1 at 2016-08-04 10:47:56 -0700
+Started GET "/auth/facebook/callback?code=AQArLa78AMUCQtejCLbsAD80V8EXI62OTkmYXKmuOPd6X6wvxsJiXvdzKAORvoZsvqmO9-4cTYysnPiTGjgrCfbe27jNl4kgTjKWiKmZ13nFllS0N7LMj3S0azseFig5SSHubOsecaK0KYX-w2F9lUJGT5rXONo9n_dZdDAl8KMQH0lPMwd9wKv2Pcvlk9EYxIVwOxzp-KiguvgtY2S_EsBAiOqE4tyTYnfFHWqrJxeaorQ1YZjYQGd9929ZqU9RTbdGbLzTQde5OccRDSN-Clz_2mldoRlQwq0IPYI9z_inmjCZ0-FQEj9O0qapIC9L2s4&state=965a830ccffbfffa1e73a77ede4ee0bc58e544fbffb6982a" for ::1 at 2016-08-04 10:47:57 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQArLa78AMUCQtejCLbsAD80V8EXI62OTkmYXKmuOPd6X6wvxsJiXvdzKAORvoZsvqmO9-4cTYysnPiTGjgrCfbe27jNl4kgTjKWiKmZ13nFllS0N7LMj3S0azseFig5SSHubOsecaK0KYX-w2F9lUJGT5rXONo9n_dZdDAl8KMQH0lPMwd9wKv2Pcvlk9EYxIVwOxzp-KiguvgtY2S_EsBAiOqE4tyTYnfFHWqrJxeaorQ1YZjYQGd9929ZqU9RTbdGbLzTQde5OccRDSN-Clz_2mldoRlQwq0IPYI9z_inmjCZ0-FQEj9O0qapIC9L2s4", "state"=>"965a830ccffbfffa1e73a77ede4ee0bc58e544fbffb6982a", "provider"=>"facebook"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("token", "name", "pic", "uid", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["token", "EAADr8tEA54QBAOUKI1ZCaekZBy2d67gnoftdZCCHF4C6DdEBhij9OoVSasP1v4MG2hZB2e356qcZBu7StH4yyJRfxFLp4iyKyxMib3a2SpujByz8ChICfKeO6CnncgWBvYQSHTaUJ6vyW8nbKPIXaLO0TRvtu4UsZD"], ["name", "Will Friebel"], ["pic", "http://graph.facebook.com/v2.6/796819854942/picture"], ["uid", "796819854942"], ["email", "will.friebel@gmail.com"], ["created_at", 2016-08-04 17:47:57 UTC], ["updated_at", 2016-08-04 17:47:57 UTC]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 10:47:57 -0700
+Processing by SessionsController#login as HTML
+  Rendering sessions/login.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  Rendered sessions/login.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 23ms (Views: 20.7ms | ActiveRecord: 0.4ms)
+
+
+=======
 >>>>>>> a0b78a1f259ae636c05b63a67ff8da7206c5022a
+>>>>>>> a0f8dc1ee62117bcb1bd1d4af4dbcc9ebea5d416
