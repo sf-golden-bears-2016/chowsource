@@ -2,9 +2,11 @@ require 'faker'
 
 20.times do
   User.create(
-    username: Faker::Name.name,
+    name: Faker::Name.name,
     email: Faker::Internet.email,
-    password_digest: '123'
+    token: "jakshdashaiusnd",
+    pic: "http://www.freegreatpicture.com/kitty/kitten-play-1217",
+    uid: "asdhjkashdk"
     )
 end
 
