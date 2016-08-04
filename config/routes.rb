@@ -1,19 +1,25 @@
 Rails.application.routes.draw do
-  get 'recipes/show'
+  get '/auth/:provider/callback', to: 'sessions#create'
+  root "sessions#login"
 
-  get 'recipes/edit'
+  resources :recipes
 
-  get 'recipes/index'
+  # get 'recipes/show'
 
-  get 'recipes/new'
+  # get 'recipes/edit'
 
-  get 'recipes/create'
+  # get 'recipes/index'
 
-  get 'recipes/destroy'
+  # get 'recipes/new'
 
-  get 'recipes/update'
+  # get 'recipes/create'
+
+  # get 'recipes/destroy'
+
+  # get 'recipes/update'
 
   get 'users/show'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
 end

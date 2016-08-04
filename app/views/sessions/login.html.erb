@@ -1,0 +1,5 @@
+<h1>Chow Source</h1>
+<a href="/auth/facebook">Login with Facebook</a>
+<% if session[:id] %>
+  <p><%= User.find(session[:id]).name %></p>
+<% end %>
