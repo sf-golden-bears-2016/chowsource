@@ -1,8 +1,8 @@
 class CreateLoves < ActiveRecord::Migration[5.0]
   def change
-    create_join_table :users, :recipes do |t|
-      t.index :user_id
-      t.index :recipe_id
+    create_table :loves do |t|
+      t.integer :user_id
+      t.integer :recipe_id
     end
   end
 end
