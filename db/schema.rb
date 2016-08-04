@@ -32,6 +32,13 @@ ActiveRecord::Schema.define(version: 20160803224511) do
     t.index ["user_id"], name: "index_menus_on_user_id", using: :btree
   end
 
+  create_table "menus_recipes", id: false, force: :cascade do |t|
+    t.integer "menu_id",   null: false
+    t.integer "recipe_id", null: false
+    t.index ["menu_id"], name: "index_menus_recipes_on_menu_id", using: :btree
+    t.index ["recipe_id"], name: "index_menus_recipes_on_recipe_id", using: :btree
+  end
+
   create_table "recipes", force: :cascade do |t|
     t.string   "name"
     t.integer  "prep_time"
@@ -50,11 +57,13 @@ ActiveRecord::Schema.define(version: 20160803224511) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string   "username"
+    t.string   "token"
+    t.string   "name"
+    t.string   "pic"
+    t.string   "uid"
     t.string   "email"
-    t.string   "password_digest"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   add_foreign_key "menus", "users"
