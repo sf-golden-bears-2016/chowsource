@@ -1,9 +1,0 @@
-<h1>Welcome to <%= @user.name %> Page!</h1>
-
-
-<h3>My Love Recipes</h3>
-<ul>
-<% Love.where(user_id: @user.id).each do |loves| %>
-	<p><a href="/recipes/<%= loves.recipe_id %>"><%= Recipe.find(loves.recipe_id).name %></a></p>
-<% end %>
-</ul>
