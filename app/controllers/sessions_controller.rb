@@ -1,4 +1,5 @@
 class SessionsController < ApplicationController
+  
   def create
     token = auth_hash.credentials.token
     name = auth_hash.info.name
