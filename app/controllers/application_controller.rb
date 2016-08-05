@@ -1,11 +1,8 @@
 class ApplicationController < ActionController::Base
-  protect_from_forgery with: :exception
+  protect_from_forgery with: :null_session
 
   before_action :require_login
   skip_before_action :require_login, only: [:login, :create]
-
-
-
 
   private
 
