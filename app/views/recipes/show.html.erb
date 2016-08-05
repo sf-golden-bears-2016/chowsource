@@ -4,7 +4,6 @@
   	<h1 class="text-center"><%= @recipe.name %></h1>
   	<p class="text-center"><%= Love.where(recipe_id: @recipe.id ).length %> people have loved this recipe</p>
   	<p class="text-center">Recipe by: <a href="/users/<%= @recipe.user_id %>"><%= User.find_by(id: @recipe.user_id).name %></a> </p>
-
   	<p class="text-center">Price: $<%= @recipe.price %></p>
   	<br>
   	<h4 class="text-center">
@@ -41,7 +40,11 @@
 <br>
 <br>
 <div>
+
 <%= link_to "Back to Recipes List", recipes_path, :class => "btn btn-primary" %>
+<%= form_tag("/recipes/#{@recipe.id}/menus", method: "post") do %>
+<%= submit_tag("+ Add to menu"), :class => "btn btn-primary" %>
+
 <% if current_user.id == @recipe.user_id %>
 	<%= link_to "delete", recipe_path(@recipe), :class => "btn btn-primary",  method: :delete, data: {confirm: "Really delete the recipe?"}%> 
 
