@@ -18,7 +18,6 @@
 <%= link_to "edit", edit_recipe_path(@recipe) %><br>
 <%= link_to "<< Back to Recipes List", recipes_path %><br>
 
-<form action="/users/menu" method="post">
-  <input type="hidden" value="<%= @recipe.id %>"></input>
-  <input type="submit" value="+ Add to menu"></input>
-</form>
+<%= form_tag("/recipes/#{@recipe.id}/menus", method: "post") do %>
+  <%= submit_tag("+ Add to menu") %>
+<% end %>
