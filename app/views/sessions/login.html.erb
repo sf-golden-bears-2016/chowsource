@@ -1,5 +1,24 @@
-<h1>Chow Source</h1>
+<br>
+<br>
 <% if !current_user %>
-  <a href="/auth/facebook">Login with Facebook</a>
-<% end %>
+ <div class="container">
+        <div class="row">
+            <div class="box">
+                <div class="col-lg-12 text-center">
+     				<%= image_tag("Chow_Sorce.png", :class => "title-image") %>
+                   	<br>
+                   	<br>
+                    <a class="btn btn-primary btn-lg" href="/auth/facebook" role="button"><span class="fa fa-facebook-official"></span> Log in with Facebook</a>
+                </div>
+            </div>
+        </div>
 
+
+        <div class="row">
+            <div class="box">
+                <div class="col-lg-12 text-center">
+     				<h5>A place to build the perfect menu for your dinner parties.</h5>
+                </div>
+            </div>
+    
+<% end %>
