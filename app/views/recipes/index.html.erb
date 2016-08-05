@@ -16,7 +16,10 @@
     <div class="thumbnail food-image">
       <div class="caption" style="height: 250px";>
        <h2 class="pull-right">
-       <a href="#"><span id="recipe-heart" class="fa fa-heart-o"></span></a>
+       <form action="/recipes" method="POST">
+         <h3><%= Love.where(recipe_id: recipe.id ).length %><input id="recipe-heart" class="fa fa-heart-o" type="button" value="♥️"></h3>
+         </form>
+
        </h2>
        <h4 class="center">
       </h4>
@@ -28,8 +31,5 @@
 </div>
 <% end %>
 </div>
-
-
-
 
 <%= link_to "Create a New Recipe", new_recipe_path, class: "new_recipe" %>
