@@ -32,7 +32,11 @@ body.knife {
 }
 
 
-
+.show-image{
+	width: 90%;
+    height: auto;
+    padding: 10px;
+}
 .box {
     margin-bottom: 20px;
     padding: 30px 15px;

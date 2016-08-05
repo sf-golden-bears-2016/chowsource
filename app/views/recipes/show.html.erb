@@ -7,12 +7,12 @@
 
   	<p class="text-center">Price: $<%= @recipe.price %></p>
   	<br>
-  	<p class="text-center">
+  	<h4 class="text-center">
   		"<%= @recipe.description %>"
-  	</p>
+  	</h4>
   </div>
   <div class="col-sm-4">
-  	<img src="<%= @recipe.image %>">
+  	<img class="show-image" src="<%= @recipe.image %>">
   </div>
 
 </div>
@@ -35,14 +35,17 @@
 
 
 <div class="col-sm-12">
-  	<h3><%= @recipe.directions %></h3>
-	 
-
+  	<h4><%= @recipe.directions %></h4>
  </div>
+<br>
+<br>
+<br>
+<div>
+<%= link_to "Back to Recipes List", recipes_path, :class => "btn btn-primary" %>
 
- 
+<%= link_to "delete", recipe_path(@recipe), :class => "btn btn-primary",  method: :delete, data: {confirm: "Really delete the recipe?"}%> 
 
-<%= link_to "delete", recipe_path(@recipe), method: :delete, data: {confirm: "Really delete the recipe?"} %><br>
-<%= link_to "edit", edit_recipe_path(@recipe) %><br>
-<%= link_to "<< Back to Recipes List", recipes_path %>
+<%= link_to "edit", edit_recipe_path(@recipe), :class => "btn btn-primary" %>
+</div>
+
 </div>
