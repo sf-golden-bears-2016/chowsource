@@ -21,15 +21,8 @@ ActiveRecord::Schema.define(version: 20160803224511) do
   end
 
   create_table "menu_recipes", force: :cascade do |t|
-    t.integer "menu_id"
+    t.integer "user_id"
     t.integer "recipe_id"
-  end
-
-  create_table "menus", force: :cascade do |t|
-    t.integer  "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_menus_on_user_id", using: :btree
   end
 
   create_table "recipes", force: :cascade do |t|
@@ -46,7 +39,6 @@ ActiveRecord::Schema.define(version: 20160803224511) do
     t.integer  "user_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
-    t.index ["user_id"], name: "index_recipes_on_user_id", using: :btree
   end
 
   create_table "users", force: :cascade do |t|
@@ -59,6 +51,4 @@ ActiveRecord::Schema.define(version: 20160803224511) do
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "menus", "users"
-  add_foreign_key "recipes", "users"
 end
