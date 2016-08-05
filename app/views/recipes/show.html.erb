@@ -16,4 +16,9 @@
 
 <%= link_to "delete", recipe_path(@recipe), method: :delete, data: {confirm: "Really delete the recipe?"} %><br>
 <%= link_to "edit", edit_recipe_path(@recipe) %><br>
-<%= link_to "<< Back to Recipes List", recipes_path %>
+<%= link_to "<< Back to Recipes List", recipes_path %><br>
+
+<form action="/users/menu" method="post">
+  <input type="hidden" value="<%= @recipe.id %>"></input>
+  <input type="submit" value="+ Add to menu"></input>
+</form>
