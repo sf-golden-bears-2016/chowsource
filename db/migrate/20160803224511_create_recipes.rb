@@ -11,7 +11,7 @@ class CreateRecipes < ActiveRecord::Migration[5.0]
       t.integer :servings
       t.string :course
       t.string :image
-      t.references :user, foreign_key: true
+      t.integer :user_id
 
       t.timestamps
     end

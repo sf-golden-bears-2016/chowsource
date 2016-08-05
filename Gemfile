@@ -30,6 +30,10 @@ gem 'faker'
 gem 'dotenv-rails'
 gem 'omniauth-facebook'
 
+# CarrierWave, and the second gem called mini_magick helps with the resizing of images in your Rails application
+gem 'carrierwave', '~> 0.10.0'
+gem 'mini_magick', '~> 4.3'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

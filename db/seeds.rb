@@ -10,11 +10,6 @@ require 'faker'
     )
 end
 
-10.times do
-  Menu.create(
-    user_id: rand(1..20)
-    )
-end
 
 50.times do
   Recipe.create(
@@ -35,7 +30,7 @@ end
 
 30.times do
   MenuRecipe.create(
-    menu_id: rand(1..20),
+    user_id: rand(1..20),
     recipe_id: rand(1..50)
     )
 end
