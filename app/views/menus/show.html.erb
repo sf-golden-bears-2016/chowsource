@@ -1,14 +1,24 @@
-<h1>Menu</h1>
+<h1 class="box text-center">Menu</h1>
+
+
 <% if @menu_recipes %>
   <ul>
     <% @menu_recipes.each do |recipe| %>
-      <li>
-        <h2><%= recipe.name %></h2>
-        <p><%= recipe.description %></p>
-        <p><em><%= recipe.user.name %></em></p>
+      <li class="box">
+        <div class="row">
+          <div class="col-sm-3">
+            <img class="menu-image" src="<%= recipe.image %>">
 
-        <%= form_tag("/recipes/#{recipe.id}/menus", method: "delete", class: "remove_recipe") do %>
-        <%= submit_tag("Remove from Menu") %>
+           </div>
+
+           <div class="col-sm-9">
+            <h2><%= recipe.name %></h2>
+              <p><%= recipe.description %></p>
+              <p><em>Recipe created by: <%= recipe.user.name %></em></p>
+          </div>
+
+        <%= form_tag("/recipes/#{recipe.id}/menus", method: "delete") do %>
+        <%= submit_tag("Remove from Menu", :class => "btn btn-danger") %>
         <% end %>
 
       </li>
@@ -16,4 +26,5 @@
   </ul>
 <% end %>
 
-<%= link_to '+ Add more recipes', recipes_path %>
+<%= link_to '+ Add more recipes', recipes_path, :class => "btn btn-primary" %>
+

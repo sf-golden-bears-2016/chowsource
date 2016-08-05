@@ -37,6 +37,12 @@ body.knife {
     height: auto;
     padding: 10px;
 }
+
+.menu-image{
+    width: 50%;
+    height: auto;
+    padding: 10px;
+}
 .box {
     margin-bottom: 20px;
     padding: 30px 15px;
