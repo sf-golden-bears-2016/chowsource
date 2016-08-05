@@ -59,8 +59,12 @@
         <li><a href="/sessions/logout">Logout</a></li>
         </ul>
 
-        <ul class="nav navbar-nav navbar-right">
+        <ul class="nav navbar-nav navbar-left">
           <li><a href="/users/profile"><%= "#{current_user.name}"%></a></li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-left" style="margin-top: 1em">
+          <li><img src="<%= current_user.pic %>"></li>
         </ul>
       </div>
     </div>
