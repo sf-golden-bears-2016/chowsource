@@ -42,10 +42,11 @@
 <br>
 <div>
 <%= link_to "Back to Recipes List", recipes_path, :class => "btn btn-primary" %>
+<% if current_user.id == @recipe.user_id %>
+	<%= link_to "delete", recipe_path(@recipe), :class => "btn btn-primary",  method: :delete, data: {confirm: "Really delete the recipe?"}%> 
 
-<%= link_to "delete", recipe_path(@recipe), :class => "btn btn-primary",  method: :delete, data: {confirm: "Really delete the recipe?"}%> 
-
-<%= link_to "edit", edit_recipe_path(@recipe), :class => "btn btn-primary" %>
+	<%= link_to "edit", edit_recipe_path(@recipe), :class => "btn btn-primary" %>
+<% end %>
 </div>
 
 </div>
