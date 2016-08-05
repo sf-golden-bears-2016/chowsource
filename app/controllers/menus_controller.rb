@@ -10,5 +10,11 @@ class MenusController < ApplicationController
   def show
   end
 
+  def delete
+  recipe = Recipe.find(params[:id])
+  current_user.featured_recipes.delete(recipe)
+  redirect_to "/users/menus"
+  end
+
 end
 

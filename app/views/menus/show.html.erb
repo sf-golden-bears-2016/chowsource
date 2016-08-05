@@ -1,12 +1,19 @@
 <h1>Menu</h1>
+<% if @menu_recipes %>
+  <ul>
+    <% @menu_recipes.each do |recipe| %>
+      <li>
+        <h2><%= recipe.name %></h2>
+        <p><%= recipe.description %></p>
+        <p><em><%= recipe.user.name %></em></p>
 
-<ul>
-<% @menu_recipes.each do |recipe| %>
-  <li>
-    <h2><%= recipe.name %></h2>
-    <p><%= recipe.description %></p>
-    <p><em><%= recipe.user.name %></em></p>
+        <%= form_tag("/recipes/#{recipe.id}/menus", method: "delete") do %>
+        <%= submit_tag("Remove from Menu") %>
+        <% end %>
 
-  </li>
+      </li>
+    <% end %>
+  </ul>
 <% end %>
-</ul>
+
+<%= link_to '+ Add more recipes', recipes_path %>
