@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get '/sessions/logout', to: 'sessions#delete'
   post "/recipes/:id/menus", to: 'menus#create'
   get "/users/menus", to: 'menus#show'
+  delete "/recipes/:id/menus", to: 'menus#delete'
   root "sessions#login"
 
   resources :recipes
