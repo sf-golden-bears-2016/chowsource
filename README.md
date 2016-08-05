@@ -3,6 +3,7 @@
 
 ## The Idea
 - a webapp where home cheifs like can submit their favorite recipes, and get paid for their creations.
+[ChowSource](https://chowsource-app.herokuapp.com/)
 
 ## MVP
 - user can register (OAuth)
@@ -31,7 +32,7 @@
 - users can see all recipes
 - user can Love other users recipes
 - users should be able to view the individual recipes
- 
+
 - CRUD for menus
 - users can make menus
 - users can add recipes to their menu

@@ -1,22 +1,17 @@
-<h1>All Recipes</h1>
-
-<!-- <ul id="recipes">
-  <%# @recipes.each do |recipe| %>
-  <li>
-    <%#= link_to recipe.title, recipe_path(recipe), class: 'recipe_title', id: "recipe_#{recipe.id}" %>
-  </li>
-  <%# end %>
-</ul> -->
+<h1 class="box-small text-center">All Recipes</h1>
 
 <div class="container">
  <div class="row">
   <% @recipes.each do |recipe| %>
   <div class="col-sm-4 col-lg-4 col-md-4">
-  <div><h3><a href="/recipes/<%= recipe.id %>"><%= recipe.name%></a></h3>
+  <div><h3 class="box-small text-center"><a href="/recipes/<%= recipe.id %>"><%= recipe.name%></a></h3>
     <div class="thumbnail food-image">
       <div class="caption" style="height: 250px";>
        <h2 class="pull-right">
-       <a href="#"><span id="recipe-heart" class="fa fa-heart-o"></span></a>
+       <form action="/recipes" method="POST">
+         <h3><%= Love.where(recipe_id: recipe.id ).length %><input id="recipe-heart" class="fa fa-heart-o" type="button" value="♥️"></h3>
+         </form>
+
        </h2>
        <h4 class="center">
       </h4>
@@ -28,8 +23,5 @@
 </div>
 <% end %>
 </div>
-
-
-
 
 <%= link_to "Create a New Recipe", new_recipe_path, class: "new_recipe" %>

@@ -1,19 +1,45 @@
+<div class="box">
+<div class="row">
+  <div class="col-sm-8">
+  	<h1 class="text-center"><%= @recipe.name %></h1>
+  	<p class="text-center"><%= Love.where(recipe_id: @recipe.id ).length %> people have loved this recipe</p>
+  	<p class="text-center">Recipe by: <a href="/users/<%= @recipe.user_id %>"><%= User.find_by(id: @recipe.user_id).name %></a> </p>
+  	<p class="text-center">Price: $<%= @recipe.price %></p>
+  	<br>
+  	<h4 class="text-center">
+  		"<%= @recipe.description %>"
+  	</h4>
+  </div>
+  <div class="col-sm-4">
+  	<img class="show-image" src="<%= @recipe.image %>">
+  </div>
 
-<h1><%= @recipe.name %></h1>
-<p>by: <a href="/users/<%= @recipe.user_id %>"><%= User.find_by(id: @recipe.user_id).name %></a></p>
-<ul>
-  <li><%= @recipe.prep_time %></li>
-  <li><%= @recipe.cook_time %></li>
-  <li><%= @recipe.ingredients %></li>
-  <li><%= @recipe.price %></li>
-  <li><%= @recipe.description %></li>
-  <li><%= @recipe.directions %></li>
-  <li><%= @recipe.servings %></li>
-  <li><%= @recipe.course %></li>
-  <li><img src="<%= @recipe.image %>"></li>
-</ul>
+</div>
+
+<div class="col-sm-12">
+  	<h3>Ingredients</h3>
+	<p><%= @recipe.ingredients %></p>
+ </div>
+<hr>
 
 
+<div class="col-sm-12">
+  	<h3>Directions</h3>
+	  <p>Prep time: <%= @recipe.prep_time %> |
+	 Cook time: <%= @recipe.cook_time %> |
+	 Serving Size: <%= @recipe.servings %> |
+	 Course: <%= @recipe.course %></p>
+
+ </div>
+
+
+<div class="col-sm-12">
+  	<h4><%= @recipe.directions %></h4>
+ </div>
+<br>
+<br>
+<br>
+<div>
 <%= link_to "delete", recipe_path(@recipe), method: :delete, data: {confirm: "Really delete the recipe?"} %><br>
 <%= link_to "edit", edit_recipe_path(@recipe) %><br>
 <%= link_to "<< Back to Recipes List", recipes_path %><br>
@@ -21,3 +47,6 @@
 <%= form_tag("/recipes/#{@recipe.id}/menus", method: "post") do %>
   <%= submit_tag("+ Add to menu") %>
 <% end %>
+</div>
+
+</div>

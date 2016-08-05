@@ -35,9 +35,9 @@ end
     )
 end
 
-# 100.times do
-#   Love.create(
-#     user_id: rand(1..20),
-#     recipe_id: rand(1..50)
-#     )
-# end
+100.times do
+  Love.create(
+    user_id: rand(1..20),
+    recipe_id: rand(1..50)
+    )
+end

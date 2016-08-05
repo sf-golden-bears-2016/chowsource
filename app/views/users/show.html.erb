@@ -1,4 +1,4 @@
-<% if session[:user_id] %>
+<% if session[:id] %>
 
 <h1><%= @user.name %>'s Profile</h1>
 <h4>Contributed Recipes:</h4>
@@ -23,6 +23,6 @@
 </ul>
 
 <% else %>
-Please <a href="/sessions/new">Sign In</a> to see your profile.
+Please <a href="/">Sign In</a> to see your profile.
 
 <% end %>

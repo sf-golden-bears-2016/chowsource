@@ -6,5 +6,7 @@ Rails.application.routes.draw do
   root "sessions#login"
 
   resources :recipes
-  resources :users, only: [:show]
+
+  get '/users/profile', to: "users#show"
+  resources :menus
 end
