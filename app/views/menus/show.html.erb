@@ -7,7 +7,7 @@
         <p><%= recipe.description %></p>
         <p><em><%= recipe.user.name %></em></p>
 
-        <%= form_tag("/recipes/#{recipe.id}/menus", method: "delete") do %>
+        <%= form_tag("/recipes/#{recipe.id}/menus", method: "delete", class: "remove_recipe") do %>
         <%= submit_tag("Remove from Menu") %>
         <% end %>
 
