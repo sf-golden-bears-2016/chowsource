@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   get '/sessions/logout', to: 'sessions#delete'
   root "sessions#login"
   resources :recipes
-  resources :users, only: [:show]
+  get '/users/profile', to: "users#show"
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
