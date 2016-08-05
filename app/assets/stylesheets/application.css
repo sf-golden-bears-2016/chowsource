@@ -16,8 +16,22 @@
 
 
 body{
+	
+
+}
+
+body.brick {
 	background-image: url('bg.jpg');
 }
+
+body.knife {
+	background-image: url('bg3-1.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+}
+
+
 
 .box {
     margin-bottom: 20px;
