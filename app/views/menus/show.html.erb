@@ -1,1 +1,12 @@
-<h1>Menu Show page</h1>
+<h1>Menu</h1>
+
+<ul>
+<% @menu_recipes.each do |recipe| %>
+  <li>
+    <h2><%= recipe.name %></h2>
+    <p><%= recipe.description %></p>
+    <p><em><%= recipe.user.name %></em></p>
+
+  </li>
+<% end %>
+</ul>
