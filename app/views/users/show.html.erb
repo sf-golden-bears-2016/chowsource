@@ -1,9 +1,37 @@
 <% if session[:id] %>
 
-<h1><%= @user.name %>'s Profile</h1>
-<h4>Contributed Recipes:</h4>
+<h1 class="box-small text-center"><%= @user.name %>'s Profile</h1>
+
+<h3 class="box-small text-center">Contributed Recipes:</h3>
 <ul>
-  <% @recipes.each do |recipe| %>
+  <div class="box-small text-center">
+    <div class="col-sm-4 col-lg-4 col-md-4">
+      <% @recipes.each do |recipe| %>
+      <li><%= recipe.name %></li>
+      <ul>
+        <li><b>Prep Time:</b> <%= recipe.prep_time %>min</li>
+        <li><b>Cook Time:</b> <%= recipe.cook_time %>min</li>
+        <li><b>Ingredients:</b> <%= recipe.ingredients %></li>
+        <li><b>Price:</b> $<%= recipe.price.round(2) %></li>
+        <li><b>Description:</b> <%= recipe.description %></li>
+        <li><b>Directions:</b> <%= recipe.directions %></li>
+        <li><b>Servings:</b> <%= recipe.servings %></li>
+        <li><b>Course:</b> <%= recipe.course %></li>
+      </ul>
+
+      <% if current_user.id == recipe.user_id %>
+      <%= link_to 'Edit', edit_recipe_path(recipe) %> |
+      <%= link_to 'Delete', delete_recipe_path(recipe) %>
+      <% end %>
+
+      <% end %>
+    </div>
+  </div>
+</ul>
+
+<h3 class="box-small text-center">Loved Recipes:</h3>
+<ul>
+  <% @user.favorite_recipes.each do |recipe| %>
   <li><%= recipe.name %></li>
   <ul>
     <li><b>Prep Time:</b> <%= recipe.prep_time %>min</li>
@@ -16,27 +44,10 @@
     <li><b>Course:</b> <%= recipe.course %></li>
   </ul>
 
-  <%= link_to 'Edit', edit_recipe_path(recipe) %>
-
+  <% if current_user.id == recipe.user_id %>
+  <%= link_to 'Edit', edit_recipe_path(recipe) %> |
+  <%= link_to 'Delete', delete_recipe_path(recipe) %>
   <% end %>
-</ul>
-
-<h4>Loved Recipes:</h4>
-<ul>
-  <% current_user.loves.each do |love| %>
-  <li><%= love.recipe.name %></li>
-  <ul>
-    <li><b>Prep Time:</b> <%= love.recipe.prep_time %>min</li>
-    <li><b>Cook Time:</b> <%= love.recipe.cook_time %>min</li>
-    <li><b>Ingredients:</b> <%= love.recipe.ingredients %></li>
-    <li><b>Price:</b> $<%= love.recipe.price.round(2) %></li>
-    <li><b>Description:</b> <%= love.recipe.description %></li>
-    <li><b>Directions:</b> <%= love.recipe.directions %></li>
-    <li><b>Servings:</b> <%= love.recipe.servings %></li>
-    <li><b>Course:</b> <%= love.recipe.course %></li>
-  </ul>
-
-  <%= link_to 'Edit', edit_recipe_path(recipe) %>
 
   <% end %>
 </ul>
