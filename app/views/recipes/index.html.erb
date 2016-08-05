@@ -1,0 +1,46 @@
+<h1 class="box-small text-center">All Recipes</h1>
+<div class="text-center">
+  <%= link_to "CREATE A NEW RECIPE", new_recipe_path, :class => "btn btn-default" %>
+</div>
+
+<div class="container">
+  <div class="row">
+    <% @recipes.each do |recipe| %>
+    <div class="col-sm-4 col-lg-4 col-md-4">
+      <div><h3 class="box-small text-center"><a href="/recipes/<%= recipe.id %>"><%= recipe.name%></a></h3>
+        <div class="thumbnail food-image">
+          <div class="caption" style="height: 250px";>
+            <h2 class="pull-right">
+              <!-- <form action="/loves" method="POST"> -->
+              <h3 style="float:right;">
+
+                <% if Love.find_by(user_id: current_user.id, recipe_id: recipe.id) %>
+
+                <%= form_tag("/loves/#{recipe.id}", method: "delete") do %>
+                  <div style="color:red;"><%= submit_tag("♥️") %>
+                <span style="color:black;"><%= Love.where(recipe_id: recipe.id ).length %></span></div>
+                <% end %>
+
+                <% else %>
+
+                <%= form_tag("/loves/#{recipe.id}", method: "post") do %>
+                  <%= submit_tag("♡") %>
+                <%= Love.where(recipe_id: recipe.id ).length %>
+                <% end %>
+
+                <% end %>
+              </h3>
+              <!-- </form> -->
+
+            </h2>
+            <h4 class="center">
+            </h4>
+          </div>
+        </div>
+
+        <br>
+      </div>
+    </div>
+    <% end %>
+  </div>
+

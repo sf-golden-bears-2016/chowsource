@@ -1,0 +1,64 @@
+<div class="box">
+	<div class="row">
+		<div class="col-sm-8">
+			<h1 class="text-center"><%= @recipe.name %></h1>
+			<p class="text-center"><%= Love.where(recipe_id: @recipe.id ).length %> people have loved this recipe</p>
+			<p class="text-center">Recipe by: <a href="/users/<%= @recipe.user_id %>"><%= User.find_by(id: @recipe.user_id).name %></a> </p>
+			<p class="text-center">Price: $<%= @recipe.price %></p>
+			<br>
+			<h4 class="text-center">
+				"<%= @recipe.description %>"
+			</h4>
+		</div>
+		<div class="col-sm-4">
+			<img class="show-image" src="<%= @recipe.image %>">
+		</div>
+
+	</div>
+
+	<div class="col-sm-12">
+		<h3>Ingredients</h3>
+		<p><%= @recipe.ingredients %></p>
+	</div>
+	<hr>
+
+
+	<div class="col-sm-12">
+		<h3>Directions</h3>
+		<p>Prep time: <%= @recipe.prep_time %> |
+			Cook time: <%= @recipe.cook_time %> |
+			Serving Size: <%= @recipe.servings %> |
+			Course: <%= @recipe.course %></p>
+
+		</div>
+
+
+		<div class="col-sm-12">
+			<h4><%= @recipe.directions %></h4>
+		</div>
+		<br>
+		<br>
+		<br>
+
+
+		<div class="col-sm-2">
+			<%= link_to "Back to Recipes List", recipes_path, :class => "btn btn-primary" %>
+			<%= form_tag("/recipes/#{@recipe.id}/menus", method: "post") %>
+
+		</div>
+
+		<div class="col-sm-2">
+			<%= submit_tag("+ Add to menu", :class => "btn btn-primary")%>
+		</div>
+		<% if current_user.id == @recipe.user_id %>
+		<div class="col-sm-2">
+			<%= link_to "delete", recipe_path(@recipe), :class => "btn btn-danger",  method: :delete, data: {confirm: "Really delete the recipe?"}%> 
+		</div>
+		<div class="col-sm-2">	
+			<%= link_to "edit", edit_recipe_path(@recipe), :class => "btn btn-success" %>
+		</div>
+		<% end %>
+
+
+	</div>
+

@@ -1,0 +1,64 @@
+<div class="box">
+<%= form_for(@recipe) do |f| %>
+<ul>
+  <% @recipe.errors.full_messages.each do |error| %>
+  <li><%= error %></li>
+  <% end %>
+</ul>
+
+<div class="form-group">
+  <%= f.label :name %><br />
+  <%= f.text_field :name,  class: "form-control" %>
+</div>
+
+
+<div class="form-group">
+  <%= f.label :prep_time %><br />
+  <%= f.text_field :prep_time,  class: "form-control" %>
+</div>
+
+
+<div class="form-group">
+  <%= f.label :cook_time %><br />
+  <%= f.text_field :cook_time,  class: "form-control" %>
+</div>
+
+
+<div class="form-group">
+  <%= f.label :ingredients %><br />
+  <%= f.text_field :ingredients,  class: "form-control" %>
+</div>
+
+
+<div class="form-group">
+  <%= f.label :price %><br />
+  <%= f.text_field :price,  class: "form-control" %>
+</div>
+
+
+<div class="form-group">
+  <%= f.label :description %><br />
+  <%= f.text_field :description,  class: "form-control" %>
+</div>
+
+<div class="form-group">
+  <%= f.label :directions %><br />
+  <%= f.text_field :directions,  class: "form-control" %>
+</div>
+
+<div class="form-group">
+  <%= f.label :servings %><br />
+  <%= f.text_field :servings,  class: "form-control" %>
+</div>
+
+<div class="form-group">
+  <%= f.label :course %><br />
+  <%= f.select :course, ['Appetizer', 'Soup', 'Salad', 'Entree', 'Dessert'],  class: "form-control" %>
+</div>
+
+
+<p>
+  <%= button_tag "Submit", :class => "btn btn-default btn-circle glyphicon", :type => "submit" %>
+</p>
+<% end %>
+</div>

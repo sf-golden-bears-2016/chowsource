@@ -1,24 +1,43 @@
-# README
+#ChowSource
+> Georgia, Will, Alex, Jason
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## The Idea
+- a webapp where home cheifs like can submit their favorite recipes, and get paid for their creations.
+[ChowSource](https://chowsource-app.herokuapp.com/)
 
-Things you may want to cover:
+## MVP
+- user can register (OAuth)
+- user can log in (OAuth)
+- user can sign out (OAuth)
+- User has a profile page
+- user can CRUD thier recipes
+- users can add recipes to their menu
+- user can Love other users recipes
 
-* Ruby version
 
-* System dependencies
 
-* Configuration
+## What has been done
+- database created
+- user can register (OAuth)
+- user can log in (OAuth)
+- user can sign out (OAuth)
+- user has a profile page
+- seed file
+- user can CRUD thier recipes
+- users can see all recipes
+- user can Love other users recipes
+- users should be able to view the individual recipes
+- CRUD for menus
+- users can make menus
+- users can add recipes to their menu
+- syled webapp
+- users can print the menu
+- live on the interwebs
 
-* Database creation
 
-* Database initialization
+## What needs to be done
+- user can delete their account
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Stretch Goals
+- make recipes searchable
+- make recipes are sortable by(most likes, most votes, alphabetical)

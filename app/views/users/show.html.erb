@@ -1,0 +1,20 @@
+<% if session[:id] %>
+<br>
+<h1 class="white text-center">Welcome to your profile, <%= @user.name %>!</h1>
+<br>
+<br>
+<div class="box text-center">
+  <h3>Contributed Recipes:</h3>
+  
+  <% @recipes.each do |recipe| %>
+      <h3><a href="/recipes/<%= recipe.id %>"><%= recipe.name %></a></h3>
+  <% end %>
+
+<br>
+<h3>Your Loved Recipes:</h3>
+  <% @loves.each do |loves| %>
+      <h3><a href="/recipes/<%= loves.recipe_id %>"><%= Recipe.find(loves.recipe_id).name %></a></h3>
+  <% end %>
+
+</div>
+<% end %>

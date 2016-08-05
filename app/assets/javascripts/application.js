@@ -13,3 +13,29 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+
+$(document).ready(function(){
+//   $('.row #recipe-heart').on('click', clickedHeart)
+});
+
+// function clickedHeart(event){
+//   console.log("I have been clicked")
+//   event.preventDefault();
+//   $('#recipe-heart').css('color', 'red')
+// }
+
+
+// function newCatImg(event){
+//   event.preventDefault()
+//   var url = $(this).attr('href')
+//   $.ajax({
+//     url: url,
+//     method: "GET"
+//   })
+//   .done(function(response){
+//     console.log(response)
+//     $('#the-cat-image').empty()
+//     $('#the-cat-image').append(response)
+//   })
+// }
