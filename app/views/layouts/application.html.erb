@@ -30,7 +30,7 @@
   <%= javascript_include_tag 'application' %>
 </head>
 
-<body>
+<body class="<%= @page_classes || "brick" %>">
 
   <% if current_user %>
   <nav class="navbar navbar-default">
