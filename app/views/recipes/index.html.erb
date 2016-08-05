@@ -4,26 +4,42 @@
 </div>
 
 <div class="container">
- <div class="row">
-  <% @recipes.each do |recipe| %>
-  <div class="col-sm-4 col-lg-4 col-md-4">
-    <div><h3 class="box-small text-center"><a href="/recipes/<%= recipe.id %>"><%= recipe.name%></a></h3>
-      <div class="thumbnail food-image">
-        <div class="caption" style="height: 250px";>
-         <h2 class="pull-right">
-           <form action="/recipes" method="POST">
-             <h3><%= Love.where(recipe_id: recipe.id ).length %><input id="recipe-heart" class="fa fa-heart-o" type="button" value="♥️"></h3>
-           </form>
+  <div class="row">
+    <% @recipes.each do |recipe| %>
+    <div class="col-sm-4 col-lg-4 col-md-4">
+      <div><h3 class="box-small text-center"><a href="/recipes/<%= recipe.id %>"><%= recipe.name%></a></h3>
+        <div class="thumbnail food-image">
+          <div class="caption" style="height: 250px";>
+            <h2 class="pull-right">
+              <!-- <form action="/loves" method="POST"> -->
+              <h3><%= Love.where(recipe_id: recipe.id ).length %>
 
-         </h2>
-         <h4 class="center">
-         </h4>
-       </div>
-     </div>
+                <% if Love.find_by(user_id: current_user.id, recipe_id: recipe.id) %>
 
-     <br>
-   </div>
- </div>
- <% end %>
-</div>
+                <%= form_tag("/loves/#{recipe.id}", method: "delete") do %>
+                  <%= submit_tag("un-love") %>
+                <% end %>
+
+                <% else %>
+
+                <%= form_tag("/loves/#{recipe.id}", method: "post") do %>
+                  <%= submit_tag("love") %>
+                <% end %>
+
+                <% end %>
+
+              </h3>
+              <!-- </form> -->
+
+            </h2>
+            <h4 class="center">
+            </h4>
+          </div>
+        </div>
+
+        <br>
+      </div>
+    </div>
+    <% end %>
+  </div>
 

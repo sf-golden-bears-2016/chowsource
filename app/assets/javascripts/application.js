@@ -16,15 +16,14 @@
 
 
 $(document).ready(function(){
-  console.log("Ready")
-  $('.row #recipe-heart').on('click', clickedHeart)
+//   $('.row #recipe-heart').on('click', clickedHeart)
 });
 
-function clickedHeart(event){
-  console.log("I have been clicked")
-  event.preventDefault();
-  $('#recipe-heart').css('color', 'red')
-}
+// function clickedHeart(event){
+//   console.log("I have been clicked")
+//   event.preventDefault();
+//   $('#recipe-heart').css('color', 'red')
+// }
 
 
 // function newCatImg(event){
