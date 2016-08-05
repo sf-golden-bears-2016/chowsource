@@ -3,8 +3,8 @@
 <h1 class="box-small text-center"><%= @user.name %>'s Profile</h1>
 
 <h3 class="box-small text-center">Contributed Recipes:</h3>
-<ul>
-  <div class="box-small text-center">
+<div class="box-small text-center">
+  <ul>
     <div class="col-sm-4 col-lg-4 col-md-4">
       <% @recipes.each do |recipe| %>
       <li><%= recipe.name %></li>
@@ -20,14 +20,13 @@
       </ul>
 
       <% if current_user.id == recipe.user_id %>
-      <%= link_to 'Edit', edit_recipe_path(recipe) %> |
-      <%= link_to 'Delete', delete_recipe_path(recipe) %>
+      <%= link_to 'Edit', edit_recipe_path(recipe) %>
       <% end %>
 
       <% end %>
     </div>
-  </div>
-</ul>
+  </ul>
+</div>
 
 <h3 class="box-small text-center">Loved Recipes:</h3>
 <ul>
@@ -45,12 +44,14 @@
   </ul>
 
   <% if current_user.id == recipe.user_id %>
-  <%= link_to 'Edit', edit_recipe_path(recipe) %> |
-  <%= link_to 'Delete', delete_recipe_path(recipe) %>
+  <%= link_to 'Edit', edit_recipe_path(recipe) %>
   <% end %>
 
   <% end %>
 </ul>
+
+
+<%= link_to 'Create a New Recipe', new_recipe_path %>
 
 <% else %>
 Please <a href="/">Sign In</a> to see your profile.
