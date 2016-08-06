@@ -12,7 +12,13 @@
         <div class="caption" style="height: 250px";>
          <h2 class="pull-right">
            <form action="/recipes" method="POST">
-             <h3><%= Love.where(recipe_id: recipe.id ).length %><input id="recipe-heart" class="fa fa-heart-o" type="button" value="♥️"></h3>
+             <h3><%= Love.where(recipe_id: recipe.id ).length %>
+              <% if Love.find_by(user_id: current_user.id, recipe_id: recipe.id) %>
+              <input id="recipe-heart" class="fa fa-heart-o" type="button" style="color: red" value="♥️">
+              <% else %>
+              <input id="recipe-heart" class="fa fa-heart-o" type="button" style="color: black" value="♥️">
+              <% end %>
+            </h3>
            </form>
 
          </h2>
