@@ -28,12 +28,23 @@ body.knife {
 	background-image: url('bg3-1.jpg');
     background-repeat: no-repeat;
     background-size: 100% 100%;
+}
+
+body.black {
+    background-color: black;
+
 
 }
 
 
 .show-image{
 	width: 90%;
+    height: auto;
+    padding: 10px;
+}
+
+.menu-image{
+    width: 50%;
     height: auto;
     padding: 10px;
 }

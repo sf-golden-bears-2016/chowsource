@@ -22,7 +22,7 @@ class RecipesController < ApplicationController
   end
 
   def destroy
-    @recipe = recipe.find(params[:id])
+    @recipe = Recipe.find(params[:id])
     flash.notice = "Recipe '#{@recipe.name}' deleted!"
     @recipe.destroy
     redirect_to recipes_path

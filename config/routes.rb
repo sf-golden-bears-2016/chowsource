@@ -1,13 +1,16 @@
 Rails.application.routes.draw do
   get '/auth/:provider/callback', to: 'sessions#create'
   get '/sessions/logout', to: 'sessions#delete'
-  post "/recipes/:id/menus", to: 'menus#create'
-  get "/users/menus", to: 'menus#show'
-  delete "/recipes/:id/menus", to: 'menus#delete'
   root "sessions#login"
 
-  resources :recipes
-
+  get "/users/menus", to: 'menus#show'
   get '/users/profile', to: "users#show"
   resources :menus
+
+  post "/recipes/:id/menus", to: 'menus#create'
+  delete "/recipes/:id/menus", to: 'menus#delete'
+  resources :recipes
+
+  post "/loves/:id", to: 'loves#create'
+  resources :loves, only: [:destroy]
 end
